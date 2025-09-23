@@ -15,6 +15,8 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        healthcare: "bg-healthcare-teal text-white hover:bg-healthcare-teal/90 font-medium transition-all duration-200",
+        "healthcare-outline": "border-2 border-healthcare-teal text-healthcare-teal hover:bg-healthcare-teal hover:text-white font-medium transition-all duration-200",
       },
       size: {
         default: "h-10 px-4 py-2",

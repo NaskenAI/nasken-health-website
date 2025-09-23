@@ -47,6 +47,12 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Healthcare Brand Colors
+        "healthcare-teal": "hsl(var(--healthcare-teal))",
+        "healthcare-light-teal": "hsl(var(--healthcare-light-teal))",
+        "healthcare-blue": "hsl(var(--healthcare-blue))",
+        "healthcare-slate": "hsl(var(--healthcare-slate))",
+        "healthcare-gray": "hsl(var(--healthcare-gray))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",

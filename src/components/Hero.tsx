@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { FileText } from "lucide-react";
+import { Link } from "react-router-dom";
 import heroBackground from "@/assets/hero-background.jpg";
 
 const Hero = () => {
@@ -19,7 +20,7 @@ const Hero = () => {
         <a href="#research" className="text-healthcare-teal font-medium hover:underline">Research</a>
         <a href="#technology" className="text-healthcare-teal font-medium hover:underline">Technology</a>
         <a href="#contact" className="text-healthcare-teal font-medium hover:underline">Contact</a>
-        <a href="/fellowships" className="text-healthcare-teal font-medium hover:underline"> Nasken AI Health Fellowships</a>
+        <Link to="/fellowships" className="text-healthcare-teal font-medium hover:underline"> Nasken AI Health Fellowships </Link>
       </nav>
       {/* Hero content */}
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4">

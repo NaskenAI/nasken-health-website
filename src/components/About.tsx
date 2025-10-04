@@ -17,7 +17,7 @@ const About = () => {
               modern digital capabilities.
             </p>
             <p className="healthcare-body text-lg leading-relaxed">
-              Current work includes pilots on AI-supported journaling between therapy sessions, 
+              Current work includes pilots on AI-supported therapy sessions, 
               and remote patient monitoring solutions that enhance patient engagement and 
               clinical outcomes. We focus on applied research that translates directly into 
               measurable improvements in patient care.

@@ -21,7 +21,7 @@ const Hero = () => {
         <p className="text-xl md:text-2xl healthcare-subheading mb-8 animate-fade-in">
           Advancing digital health through AI.
         </p>
-        <Button 
+        {/* <Button 
           variant="healthcare"
           size="lg"
           className="inline-flex items-center gap-2 text-lg px-8 py-4 animate-scale-in"
@@ -29,7 +29,7 @@ const Hero = () => {
         >
           <FileText className="w-5 h-5" />
           Read Latest White Paper
-        </Button>
+        </Button> */}
       </div>
 
       {/* Scroll Indicator */}

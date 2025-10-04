@@ -5,12 +5,6 @@ import { Mail, Users, FileText, Phone } from "lucide-react";
 const Contact = () => {
   const contactTypes = [
     {
-      icon: <Mail className="w-6 h-6" />,
-      title: "Media Inquiries",
-      description: "Press releases, interviews, and media coverage",
-      email: "press@nasken.ai"
-    },
-    {
       icon: <Users className="w-6 h-6" />,
       title: "Partnerships",
       description: "Clinical collaborations and research partnerships",
@@ -31,7 +25,7 @@ const Contact = () => {
           Contact & Partnerships
         </h2>
         <p className="text-lg healthcare-body max-w-3xl mx-auto mb-8">
-          For media inquiries, collaborations, or partnership discussions, 
+          For collaborations, or partnership discussions, 
           we welcome conversations that advance digital health innovation.
         </p>
       </div>

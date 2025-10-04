@@ -8,13 +8,19 @@ const Contact = () => {
       icon: <Users className="w-6 h-6" />,
       title: "Partnerships",
       description: "Clinical collaborations and research partnerships",
-      email: "partnerships@nasken.ai"
+      email: "contact@nasken.ai"
     },
     {
       icon: <FileText className="w-6 h-6" />,
       title: "Research Collaboration",
       description: "Academic partnerships and joint research initiatives", 
-      email: "research@nasken.ai"
+      email: "contact@nasken.ai"
+    },
+        {
+      icon: <FileText className="w-6 h-6" />,
+      title: "Research Collaboration",
+      description: "For all other inquiries or to discuss how Nasken Health can support your organization's digital health initiatives", 
+      email: "contact@nasken.ai"
     }
   ];
 
@@ -53,30 +59,6 @@ const Contact = () => {
             </CardContent>
           </Card>
         ))}
-      </div>
-
-      <div className="text-center">
-        <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-200 max-w-2xl mx-auto">
-          <div className="flex justify-center text-healthcare-teal mb-4">
-            <Phone className="w-8 h-8" />
-          </div>
-          <h3 className="text-xl font-bold healthcare-heading mb-4">
-            General Contact
-          </h3>
-          <p className="healthcare-body mb-6">
-            For all other inquiries or to discuss how Nasken Health can support 
-            your organization's digital health initiatives.
-          </p>
-          <Button 
-            variant="healthcare"
-            size="lg" 
-            className="inline-flex items-center gap-2"
-            onClick={() => window.open("mailto:contact@nasken.ai", "_blank")}
-          >
-            <Mail className="w-5 h-5" />
-            contact@nasken.ai
-          </Button>
-        </div>
       </div>
     </section>
   );

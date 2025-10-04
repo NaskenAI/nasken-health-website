@@ -4,7 +4,7 @@ import { Calendar, ExternalLink } from "lucide-react";
 
 const Media = () => {
   const mediaItems = [
-{
+    {
       headline: "AI Clinical Copilots Gain Traction in Health Systems",
       date: "September 2025",
       summary: "Hospitals adopt 'agentic AI' for scheduling, documentation, and decision support, signaling a shift from isolated tools to AI workflows.",

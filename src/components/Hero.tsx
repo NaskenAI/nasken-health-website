@@ -15,21 +15,21 @@ const Hero = () => {
       
       {/* Content */}
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
+
+        {/* Quick Links at Top */}
+        <nav className="flex justify-center gap-6 mb-6">
+          <a href="#about" className="text-healthcare-teal font-medium hover:underline">About</a>
+          <a href="#research" className="text-healthcare-teal font-medium hover:underline">Research</a>
+          <a href="#technology" className="text-healthcare-teal font-medium hover:underline">Technology</a>
+          <a href="#contact" className="text-healthcare-teal font-medium hover:underline">Contact</a>
+        </nav>
+
         <h1 className="text-5xl md:text-7xl font-bold healthcare-heading mb-6 animate-fade-in">
           Nasken Health
         </h1>
         <p className="text-xl md:text-2xl healthcare-subheading mb-8 animate-fade-in">
           Advancing digital health through AI.
         </p>
-        {/* <Button 
-          variant="healthcare"
-          size="lg"
-          className="inline-flex items-center gap-2 text-lg px-8 py-4 animate-scale-in"
-          onClick={() => window.open("mailto:contact@nasken.ai?subject=White Paper Request", "_blank")}
-        >
-          <FileText className="w-5 h-5" />
-          Read Latest White Paper
-        </Button> */}
       </div>
 
       {/* Scroll Indicator */}

@@ -4,34 +4,34 @@ import { FileText, ExternalLink } from "lucide-react";
 
 const Research = () => {
   const publications = [
-    {
-      title: "AI-Supported Journaling in Outpatient Therapy",
-      subtitle: "Pilot Summary (2025)",
-      description: "Comprehensive analysis of AI-assisted therapeutic journaling implementation in outpatient settings, showing 34% improvement in session engagement and 28% better treatment adherence.",
-      type: "Pilot Study",
-      link: "#"
-    },
-    {
-      title: "Remote Patient Monitoring and Patient Engagement", 
-      subtitle: "White Paper (2025)",
-      description: "Evidence-based framework for implementing remote monitoring solutions that enhance patient engagement while maintaining clinical efficacy and regulatory compliance.",
-      type: "White Paper", 
-      link: "#"
-    },
-    {
-      title: "Multi-Language Accessibility in Digital Health",
-      subtitle: "Research Brief (2025)",
-      description: "Systematic review of language barriers in digital health platforms and proposed AI-powered solutions for improving healthcare accessibility across diverse populations.",
-      type: "Research Brief",
-      link: "#"
-    },
-    {
-      title: "Privacy-Preserving AI in Mental Health Applications",
-      subtitle: "Technical Report (2025)", 
-      description: "Analysis of federated learning approaches and differential privacy techniques for maintaining patient confidentiality in AI-powered mental health interventions.",
-      type: "Technical Report",
-      link: "#"
-    }
+    // {
+    //   title: "AI-Supported Journaling in Outpatient Therapy",
+    //   subtitle: "Pilot Summary (2025)",
+    //   description: "Comprehensive analysis of AI-assisted therapeutic journaling implementation in outpatient settings, showing 34% improvement in session engagement and 28% better treatment adherence.",
+    //   type: "Pilot Study",
+    //   link: "#"
+    // },
+    // {
+    //   title: "Remote Patient Monitoring and Patient Engagement", 
+    //   subtitle: "White Paper (2025)",
+    //   description: "Evidence-based framework for implementing remote monitoring solutions that enhance patient engagement while maintaining clinical efficacy and regulatory compliance.",
+    //   type: "White Paper", 
+    //   link: "#"
+    // },
+    // {
+    //   title: "Multi-Language Accessibility in Digital Health",
+    //   subtitle: "Research Brief (2025)",
+    //   description: "Systematic review of language barriers in digital health platforms and proposed AI-powered solutions for improving healthcare accessibility across diverse populations.",
+    //   type: "Research Brief",
+    //   link: "#"
+    // },
+    // {
+    //   title: "Privacy-Preserving AI in Mental Health Applications",
+    //   subtitle: "Technical Report (2025)", 
+    //   description: "Analysis of federated learning approaches and differential privacy techniques for maintaining patient confidentiality in AI-powered mental health interventions.",
+    //   type: "Technical Report",
+    //   link: "#"
+    // }
   ];
 
   return (

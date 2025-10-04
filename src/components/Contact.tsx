@@ -18,7 +18,7 @@ const Contact = () => {
     },
         {
       icon: <FileText className="w-6 h-6" />,
-      title: "Research Collaboration",
+      title: "General Contact",
       description: "For all other inquiries or to discuss how Nasken Health can support your organization's digital health initiatives", 
       email: "contact@nasken.ai"
     }

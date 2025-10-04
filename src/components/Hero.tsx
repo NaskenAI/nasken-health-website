@@ -19,10 +19,8 @@ const Hero = () => {
         <a href="#research" className="text-healthcare-teal font-medium hover:underline">Research</a>
         <a href="#technology" className="text-healthcare-teal font-medium hover:underline">Technology</a>
         <a href="#contact" className="text-healthcare-teal font-medium hover:underline">Contact</a>
-        <a href="/fellowships" className="text-healthcare-teal font-medium hover:underline">
-    Nasken AI Health Fellowships
+        <a href="/fellowships" className="text-healthcare-teal font-medium hover:underline"> Nasken AI Health Fellowships</a>
       </nav>
-
       {/* Hero content */}
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
         <h1 className="text-5xl md:text-7xl font-bold healthcare-heading mb-6 animate-fade-in">

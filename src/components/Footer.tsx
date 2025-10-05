@@ -45,8 +45,10 @@ const Footer = () => {
                 Terms of Service
               </a>
             </div>
-            <a 
-              href="#" 
+            <a
+              href="https://www.linkedin.com/company/nasken-health/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center text-gray-300 hover:text-white transition-colors duration-200"
             >
               <LinkedinIcon className="w-5 h-5 mr-2" />

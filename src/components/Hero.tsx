@@ -2,8 +2,12 @@ import { Button } from "@/components/ui/button";
 import { FileText } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroBackground from "@/assets/hero-background.jpg";
-import { HashLink } from "react-router-hash-link";
+import { Link } from "react-router-dom";
 
+const scrollTo = (id: string) => {
+  const el = document.getElementById(id);
+  if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+};
 
 const Hero = () => {
   return (
@@ -18,11 +22,21 @@ const Hero = () => {
 
       {/* Top-right nav */}
       <nav className="absolute top-6 right-6 flex gap-6 z-20">
-        <HashLink smooth to="/#about" className="text-gray-700 font-medium hover:text-healthcare-teal">About</HashLink>
-        <HashLink smooth to="/#research" className="text-gray-700 font-medium hover:text-healthcare-teal">Research</HashLink>
-        <HashLink smooth to="/#technology" className="text-gray-700 font-medium hover:text-healthcare-teal">Technology</HashLink>
-        <HashLink smooth to="/#contact" className="text-gray-700 font-medium hover:text-healthcare-teal">Contact</HashLink>
-        <Link to="/fellowships" className="text-gray-700 font-medium hover:text-healthcare-teal">Nasken AI Health Fellowships</Link>
+        <button onClick={() => scrollTo("about")} className="text-gray-700 font-medium hover:text-healthcare-teal">
+          About
+        </button>
+        <button onClick={() => scrollTo("research")} className="text-gray-700 font-medium hover:text-healthcare-teal">
+          Research
+        </button>
+        <button onClick={() => scrollTo("technology")} className="text-gray-700 font-medium hover:text-healthcare-teal">
+          Technology
+        </button>
+        <button onClick={() => scrollTo("contact")} className="text-gray-700 font-medium hover:text-healthcare-teal">
+          Contact
+        </button>
+        <Link to="/fellowships" className="text-gray-700 font-medium hover:text-healthcare-teal">
+          Nasken AI Health Fellowships
+        </Link>
       </nav>
       {/* Hero content */}
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4">

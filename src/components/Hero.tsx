@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button";
 import { FileText } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroBackground from "@/assets/hero-background.jpg";
+import { HashLink } from "react-router-hash-link";
+
 
 const Hero = () => {
   return (
@@ -16,11 +18,11 @@ const Hero = () => {
 
       {/* Top-right nav */}
       <nav className="absolute top-6 right-6 flex gap-6 z-20">
-        <a href="#about" className="text-healthcare-teal font-medium hover:underline">About</a>
-        <a href="#research" className="text-healthcare-teal font-medium hover:underline">Research</a>
-        <a href="#technology" className="text-healthcare-teal font-medium hover:underline">Technology</a>
-        <a href="#contact" className="text-healthcare-teal font-medium hover:underline">Contact</a>
-        <Link to="/fellowships" className="text-healthcare-teal font-medium hover:underline"> Nasken AI Health Fellowships </Link>
+        <HashLink smooth to="/#about" className="text-gray-700 font-medium hover:text-healthcare-teal">About</HashLink>
+        <HashLink smooth to="/#research" className="text-gray-700 font-medium hover:text-healthcare-teal">Research</HashLink>
+        <HashLink smooth to="/#technology" className="text-gray-700 font-medium hover:text-healthcare-teal">Technology</HashLink>
+        <HashLink smooth to="/#contact" className="text-gray-700 font-medium hover:text-healthcare-teal">Contact</HashLink>
+        <Link to="/fellowships" className="text-gray-700 font-medium hover:text-healthcare-teal">Nasken AI Health Fellowships</Link>
       </nav>
       {/* Hero content */}
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4">

@@ -45,12 +45,9 @@ const Media = () => {
   return (
     <section id="media" className="healthcare-section bg-muted/30">
       <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold healthcare-heading mb-4">
-          Digital Health Media
-        </h2>
+        <h2 className="text-4xl font-bold healthcare-heading mb-4">Digital Health Media</h2>
         <p className="text-lg healthcare-body max-w-3xl mx-auto">
-          Latest news and media coverage highlighting research 
-          and innovations in digital health technology.
+          Latest news and media coverage highlighting research and innovations in digital health technology.
         </p>
       </div>
 
@@ -67,15 +64,13 @@ const Media = () => {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="healthcare-body mb-4 leading-relaxed">
-                {item.summary}
-              </p>
-              <Button 
-                variant="healthcare-outline"
-                onClick={() => window.open("mailto:contact@nasken.ai?subject=Press Inquiry", "_blank")}
-              >
-                <ExternalLink className="w-4 h-4 mr-2" />
-                Read More
+              <p className="healthcare-body mb-4 leading-relaxed">{item.summary}</p>
+
+              <Button variant="healthcare-outline" asChild>
+                <a href={item.link} target="_blank" rel="noopener noreferrer">
+                  <ExternalLink className="w-4 h-4 mr-2" />
+                  Read More
+                </a>
               </Button>
             </CardContent>
           </Card>

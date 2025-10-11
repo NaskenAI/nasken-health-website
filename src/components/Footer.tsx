@@ -18,19 +18,22 @@ const Footer = () => {
           {/* Quick Links */}
           <div>
             <h4 className="font-semibold mb-4">Quick Links</h4>
-            <nav className="space-y-2">
-              <a href="#about" className="block text-gray-300 hover:text-white transition-colors duration-200">
+            <nav className="absolute top-6 right-6 flex gap-6 z-20">
+              <button onClick={() => scrollTo("about")} className="text-gray-700 font-medium hover:text-healthcare-teal">
                 About
-              </a>
-              <a href="#research" className="block text-gray-300 hover:text-white transition-colors duration-200">
+              </button>
+              <button onClick={() => scrollTo("research")} className="text-gray-700 font-medium hover:text-healthcare-teal">
                 Research
-              </a>
-              <a href="#technology" className="block text-gray-300 hover:text-white transition-colors duration-200">
+              </button>
+              <button onClick={() => scrollTo("technology")} className="text-gray-700 font-medium hover:text-healthcare-teal">
                 Technology
-              </a>
-              <a href="#contact" className="block text-gray-300 hover:text-white transition-colors duration-200">
+              </button>
+              <button onClick={() => scrollTo("contact")} className="text-gray-700 font-medium hover:text-healthcare-teal">
                 Contact
-              </a>
+              </button>
+              <Link to="/fellowships" className="text-gray-700 font-medium hover:text-healthcare-teal">
+                Nasken AI Health Fellowships
+              </Link>
             </nav>
           </div>
 

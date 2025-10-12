@@ -15,7 +15,7 @@ const Media = () => {
   return (
     <section id="media" className="max-w-6xl mx-auto px-4 py-10">
       <div className="text-center mb-8">
-        <h2 className="text-2xl md:text-3xl font-semibold mb-2">Digital Health Media</h2>
+        <h2 className="text-2xl md:text-3xl font-semibold mb-2">Digital Health News</h2>
         <p className="text-sm md:text-base text-slate-600 max-w-3xl mx-auto">
           Latest news and media coverage highlighting research and innovations in digital health.
         </p>

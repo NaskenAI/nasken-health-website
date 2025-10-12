@@ -13,7 +13,7 @@ const Research = () => {
   return (
     <section id="research" className="py-20 bg-ink-900 text-white">
       <div className="max-w-6xl mx-auto px-6 text-center">
-        <h2 className="text-4xl font-semibold text-leaf-400 mb-4">
+        <h2 className="text-4xl font-bold text-white mb-6">
           Why AI-Assisted Journaling Matters
         </h2>
         <p className="text-white/80 max-w-2xl mx-auto mb-12 text-lg">
@@ -29,7 +29,7 @@ const Research = () => {
               className="rounded-xl border border-white/10 p-6 shadow-sm hover:shadow-soft transition"
               style={{ background: "var(--card)" }}
             >
-              <div className="text-3xl md:text-4xl font-semibold text-leaf-400 mb-2">
+              <div className="text-3xl md:text-4xl font-bold text-white mb-1">
                 {s.value}
               </div>
               <div className="text-sm md:text-base text-white/70 leading-snug">

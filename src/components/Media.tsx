@@ -49,7 +49,7 @@ const Media = () => {
   return (
     <section id="media" className="py-20 bg-ink-900 text-white">
       <div className="text-center mb-12">
-        <h2 className="text-4xl font-semibold mb-2 text-green-200">
+        <h2 className="text-4xl font-semibold text-white mb-4">
           Blogs & News
         </h2>
         <p className="text-white/80 max-w-3xl mx-auto text-lg">

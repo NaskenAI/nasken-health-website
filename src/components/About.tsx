@@ -3,53 +3,56 @@ import healthcareTeam from "@/assets/healthcare-team.jpg";
 
 const About = () => {
   return (
-    <section id="about" className="healthcare-section bg-muted/30">
-      <div className="grid lg:grid-cols-2 gap-12 items-center">
+    <section id="about" className="py-20 bg-ink-900 text-white">
+      <div className="section grid lg:grid-cols-2 gap-12 items-center">
+        {/* Text */}
         <div>
-          <h2 className="text-4xl font-bold healthcare-heading mb-6">
+          <h2 className="text-4xl font-semibold mb-6 text-leaf-400">
             About Nasken Health
           </h2>
-          <div className="space-y-6">
-            <p className="healthcare-body text-lg leading-relaxed">
-              Nasken Health is a Boston-based digital health company founded in 2025, 
-              specializing in AI-powered solutions for mental health and healthcare engagement. 
-              Our mission is to bridge the gap between traditional healthcare delivery and 
-              modern digital capabilities.
+
+          <div className="space-y-6 text-white/80">
+            <p>
+              Nasken Health is a Boston-based digital health company founded in 2025,
+              developing AI-powered solutions for mental health and patient engagement.
+              Our mission is to bridge the gap between traditional healthcare delivery
+              and modern digital intelligence.
             </p>
-            <p className="healthcare-body text-lg leading-relaxed">
-              Current work includes pilots on AI-supported therapy sessions, 
-              and remote patient monitoring solutions that enhance patient engagement and 
-              clinical outcomes. We focus on applied research that translates directly into 
-              measurable improvements in patient care.
+            <p>
+              Current work includes pilots on AI-supported therapy sessions and remote
+              patient monitoring that enhances engagement and clinical outcomes. Our
+              applied research directly translates into measurable improvements in care.
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-            <div className="text-center p-4">
-              <Brain className="w-8 h-8 text-healthcare-teal mx-auto mb-3" />
-              <h3 className="font-semibold healthcare-heading text-sm">AI-Powered</h3>
-              <p className="text-xs healthcare-body mt-1">Advanced machine learning for healthcare</p>
-            </div>
-            <div className="text-center p-4">
-              <Heart className="w-8 h-8 text-healthcare-teal mx-auto mb-3" />
-              <h3 className="font-semibold healthcare-heading text-sm">Patient-Centered</h3>
-              <p className="text-xs healthcare-body mt-1">Focused on improving patient outcomes</p>
-            </div>
-            <div className="text-center p-4">
-              <Shield className="w-8 h-8 text-healthcare-teal mx-auto mb-3" />
-              <h3 className="font-semibold healthcare-heading text-sm">Privacy First</h3>
-              <p className="text-xs healthcare-body mt-1">HIPAA-compliant and secure by design</p>
-            </div>
+
+          {/* Feature Tiles */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+            {[
+              { Icon: Brain, title: "AI-Powered", text: "Machine learning for personalized care" },
+              { Icon: Heart, title: "Patient-Centered", text: "Improving outcomes through engagement" },
+              { Icon: Shield, title: "Privacy-First", text: "HIPAA-compliant and secure by design" },
+            ].map(({ Icon, title, text }) => (
+              <div
+                key={title}
+                className="rounded-xl border border-white/10 p-5 text-center text-white shadow-soft"
+                style={{ background: "var(--card)" }}
+              >
+                <Icon className="w-8 h-8 text-leaf-400 mx-auto mb-3" />
+                <h3 className="font-semibold text-sm text-white">{title}</h3>
+                <p className="text-xs text-white/70 mt-1">{text}</p>
+              </div>
+            ))}
           </div>
         </div>
-        
+
+        {/* Image */}
         <div className="relative">
-          <img 
-            src={healthcareTeam} 
-            alt="Healthcare professionals using AI technology in clinical setting"
-            className="rounded-lg shadow-healthcare w-full"
+          <img
+            src={healthcareTeam}
+            alt="Healthcare professionals using AI technology"
+            className="rounded-xl w-full border border-white/10 shadow-soft"
           />
-          <div className="absolute inset-0 rounded-lg bg-healthcare-teal/10"></div>
+          <div className="absolute inset-0 rounded-xl bg-leaf-500/10"></div>
         </div>
       </div>
     </section>

@@ -7,7 +7,7 @@ const About = () => {
       <div className="section grid lg:grid-cols-2 gap-12 items-center">
         {/* Text */}
         <div>
-        <h2 className="text-2xl md:text-3xl font-semibold mb-2 text-emerald-200">
+        <h2 className="text-2xl md:text-3xl font-semibold mb-2 text-green-200">
           About Nasken Health
           </h2>
 

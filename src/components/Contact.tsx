@@ -45,7 +45,7 @@ const Contact = () => {
             <h3 className="font-semibold text-lg mb-2">{contact.title}</h3>
             <p className="text-sm text-white/70 mb-6">{contact.description}</p>
             <a
-              href="/Contact"
+              href="/contact"
               className="inline-flex items-center justify-center rounded-lg px-5 py-3 font-medium text-gray-900 bg-white hover:bg-gray-100 transition shadow-sm"
             >
               Contact Us

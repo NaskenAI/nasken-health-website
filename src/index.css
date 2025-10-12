@@ -8,8 +8,8 @@
     radial-gradient(900px 500px at 15% 10%, rgba(16,185,129,.18), transparent 60%),
     radial-gradient(700px 420px at 85% 15%, rgba(5,150,105,.16), transparent 60%),
     linear-gradient(135deg,#0A0E17 0%,#0F1824 60%,#0A0E17 100%);
-  --btn: linear-gradient(90deg,#10B981 0%,#34D399 100%);
-  --card: rgba(255,255,255,.04);
+  --btn: linear-gradient(to right, #3cb371, #2e8b57);
+  --card: rgba(255, 255, 255, 0.05);
 }
 html,body,#root{height:100%}
 .section{ @apply max-w-6xl mx-auto px-4; }

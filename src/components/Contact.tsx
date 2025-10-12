@@ -1,25 +1,26 @@
 import { Mail, Users, FileText } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Contact = () => {
   const contactTypes = [
     {
       icon: <Users className="w-6 h-6 text-leaf-400" />,
       title: "Partnerships",
-      description: "Clinical collaborations and research partnerships",
-      email: "contact@nasken.ai"
+      description:
+        "Clinical collaborations and research partnerships",
     },
     {
       icon: <FileText className="w-6 h-6 text-leaf-400" />,
       title: "Research Collaboration",
-      description: "Academic partnerships and joint research initiatives",
-      email: "contact@nasken.ai"
+      description:
+        "Academic partnerships and joint research initiatives",
     },
     {
       icon: <Mail className="w-6 h-6 text-leaf-400" />,
       title: "General Contact",
-      description: "For all other inquiries or to discuss how Nasken Health can support your organization's digital health initiatives",
-      email: "contact@nasken.ai"
-    }
+      description:
+        "For all other inquiries or to discuss how Nasken Health can support your organization's digital health initiatives",
+    },
   ];
 
   return (
@@ -44,12 +45,12 @@ const Contact = () => {
             <div className="flex justify-center mb-4">{contact.icon}</div>
             <h3 className="font-semibold text-lg mb-2">{contact.title}</h3>
             <p className="text-sm text-white/70 mb-6">{contact.description}</p>
-            <a
-              href="/contact"
+            <Link
+              to="/contact"
               className="inline-flex items-center justify-center rounded-lg px-5 py-3 font-medium text-gray-900 bg-white hover:bg-gray-100 transition shadow-sm"
             >
               Contact Us
-            </a>
+            </Link>
           </div>
         ))}
       </div>

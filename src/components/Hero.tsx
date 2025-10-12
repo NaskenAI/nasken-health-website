@@ -1,25 +1,80 @@
-export default function Hero() {
-  return (
-    <section style={{ background:"var(--hero)" }}>
-      <div className="section py-18 md:py-20 grid md:grid-cols-2 gap-10 items-center">
-        <div>
-          <h1 className="h1 text-white">Clinical insights from everyday narratives</h1>
-          <p className="mt-4 text-white/80">
-            AI journaling and summarization that turns reflections into clinician-ready context.
-          </p>
-          <div className="mt-6 flex gap-3">
-            <a className="rounded-lg px-5 py-3 font-medium text-ink-900 bg-white hover:opacity-90" href="#contact">Get early access</a>
-            <a className="rounded-lg px-5 py-3 font-medium border border-white/30 text-white hover:bg-white/10" href="#technology">See technology</a>
-          </div>
-          <p className="mt-6 text-xs text-white/60">HIPAA-aligned • FHIR/HL7 • Audit trails</p>
-        </div>
+// src/components/Hero.tsx
+import { Link } from "react-router-dom";
+import heroBackground from "@/assets/hero-background.jpg";
 
-        <div className="relative">
-          <div className="rounded-xl border border-white/12" style={{ background:"var(--card)" }}>
-            <div className="aspect-[4/3] rounded-xl" />
-          </div>
+const scrollTo = (id: string) => {
+  const el = document.getElementById(id);
+  if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+};
+
+const Hero = () => {
+  return (
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-ink-900 text-white">
+      {/* Background image with green-tinted overlay */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
+        style={{ backgroundImage: `url(${heroBackground})` }}
+      />
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(900px 500px at 15% 10%, rgba(16,185,129,.18), transparent 60%), radial-gradient(700px 420px at 85% 15%, rgba(5,150,105,.16), transparent 60%)",
+        }}
+      />
+
+      {/* Top-right nav */}
+      <nav className="absolute top-6 right-6 z-20 flex flex-wrap items-center gap-6 text-sm">
+        <button onClick={() => scrollTo("about")} className="text-white/80 hover:text-leaf-400">
+          About
+        </button>
+        <button onClick={() => scrollTo("research")} className="text-white/80 hover:text-leaf-400">
+          Research
+        </button>
+        <button onClick={() => scrollTo("technology")} className="text-white/80 hover:text-leaf-400">
+          Technology
+        </button>
+        <button onClick={() => scrollTo("contact")} className="text-white/80 hover:text-leaf-400">
+          Contact
+        </button>
+        <Link to="/fellowships" className="text-white/80 hover:text-leaf-400">
+          Nasken AI Health Fellowships
+        </Link>
+      </nav>
+
+      {/* Hero content */}
+      <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
+        <h1 className="text-5xl md:text-6xl font-bold mb-6">
+          Nasken Health
+        </h1>
+        <p className="text-xl md:text-2xl text-white/85 mb-8">
+          Advancing digital health with privacy-first clinical AI.
+        </p>
+        <div className="flex items-center justify-center gap-3">
+          <a
+            href="#contact"
+            className="rounded-lg px-5 py-3 font-medium text-white shadow-soft"
+            style={{ background: "var(--btn)" }}
+          >
+            Get early access
+          </a>
+          <a
+            href="#technology"
+            className="rounded-lg px-5 py-3 font-medium border border-white/30 text-white hover:bg-white/10"
+          >
+            See technology
+          </a>
+        </div>
+      </div>
+
+      {/* Scroll indicator */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10">
+        <div className="w-6 h-10 border-2 border-leaf-400 rounded-full flex justify-center">
+          <div className="w-1 h-3 bg-leaf-400 rounded-full mt-2 animate-pulse" />
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default Hero;

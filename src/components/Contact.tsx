@@ -53,18 +53,6 @@ const Contact = () => {
           </div>
         ))}
       </div>
-
-      <div className="text-center mt-10 text-white/60 text-sm">
-        <p>
-          You can also reach us at{" "}
-          <a
-            href="mailto:contact@nasken.ai"
-            className="text-leaf-400 hover:text-leaf-300 underline underline-offset-4"
-          >
-            contact@nasken.ai
-          </a>
-        </p>
-      </div>
     </section>
   );
 };

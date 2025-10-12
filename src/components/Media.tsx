@@ -49,7 +49,7 @@ const Media = () => {
   return (
     <section id="media" className="py-20 bg-ink-900 text-white">
       <div className="text-center mb-12">
-        <h2 className="text-4xl font-semibold text-leaf-400 mb-3">
+        <h2 className="text-4xl font-semibold mb-2 text-green-200">
           Blogs & News
         </h2>
         <p className="text-white/80 max-w-3xl mx-auto text-lg">
@@ -86,7 +86,7 @@ const Media = () => {
               href={item.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-lg px-4 py-2 font-medium text-white shadow-soft text-sm"
+              className="inline-flex items-center gap-2 rounded-lg px-4 py-2 font-semibold mb-2 text-green-200"
               style={{ background: "var(--btn)" }}
             >
               <ExternalLink className="w-4 h-4" />

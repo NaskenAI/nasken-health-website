@@ -4,25 +4,29 @@ import { Cpu, Globe, Lock, Zap } from "lucide-react";
 const Technology = () => {
   const technologies = [
     {
-      icon: <Cpu className="w-8 h-8 text-healthcare-teal" />,
-      title: "AI-Assisted Summarization",
-      description: "Advanced natural language processing algorithms that analyze patient-generated content to provide clinicians with actionable insights while preserving context and nuance."
+      icon: <Cpu className="w-8 h-8 text-sky-600" />,
+      title: "Clinical Language Intelligence",
+      description:
+        "Domain-adapted language models trained on de-identified medical text to transform unstructured narratives into structured, clinically relevant insights.",
     },
     {
-      icon: <Globe className="w-8 h-8 text-healthcare-teal" />,
-      title: "Multi-Language Accessibility", 
-      description: "Real-time translation and culturally-aware content adaptation ensuring equitable access to digital health tools across diverse patient populations."
+      icon: <Globe className="w-8 h-8 text-sky-600" />,
+      title: "Interoperable Architecture",
+      description:
+        "FHIR/HL7-based data exchange enabling seamless integration with electronic health record systems, remote monitoring platforms, and provider dashboards.",
     },
     {
-      icon: <Lock className="w-8 h-8 text-healthcare-teal" />,
-      title: "Privacy & Secure Design",
-      description: "HIPAA-compliant architecture with end-to-end encryption, federated learning capabilities, and differential privacy techniques to protect sensitive health data."
+      icon: <Lock className="w-8 h-8 text-sky-600" />,
+      title: "Privacy-First Infrastructure",
+      description:
+        "Encrypted data handling, role-based access control, and audit trails ensure HIPAA alignment and patient trust from data ingestion to inference.",
     },
     {
-      icon: <Zap className="w-8 h-8 text-healthcare-teal" />,
-      title: "Real-Time Processing",
-      description: "Low-latency processing pipelines that enable immediate feedback and intervention opportunities while maintaining clinical workflow integration."
-    }
+      icon: <Zap className="w-8 h-8 text-sky-600" />,
+      title: "Adaptive Insight Engine",
+      description:
+        "Continuous learning loops that refine outputs through clinician feedback while maintaining versioned model governance and transparent evaluation.",
+    },
   ];
 
   return (

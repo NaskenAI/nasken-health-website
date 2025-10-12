@@ -6,20 +6,23 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Fellowships from "./pages/Fellowships";
+import SiteShell from "@/components/SiteShell"; // <-- import the wrapper
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
+    <TooltipProvider delayDuration={80}>
       <Toaster />
       <Sonner />
       <Router>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/fellowships" element={<Fellowships />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <SiteShell>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/fellowships" element={<Fellowships />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </SiteShell>
       </Router>
     </TooltipProvider>
   </QueryClientProvider>

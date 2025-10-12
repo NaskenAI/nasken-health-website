@@ -21,27 +21,38 @@ const Media = () => {
         </p>
       </div>
 
-      <div className="max-w-6xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {/* tighter grid */}
+      <div className="grid gap-4 md:gap-5 md:grid-cols-2 xl:grid-cols-3">
         {mediaItems.map((item, index) => (
           <Card
             key={index}
-            className="healthcare-card hover:border-healthcare-teal/50 transition-colors duration-200"
+            className="border rounded-lg shadow-sm hover:shadow-md transition p-4 md:p-5"
           >
-            <CardHeader>
-              <div className="flex items-center gap-2 text-healthcare-gray mb-2">
-                <Calendar className="w-4 h-4" />
-                <span className="text-sm font-medium">{item.date}</span>
+            {/* zero default CardHeader padding */}
+            <CardHeader className="p-0 mb-2">
+              <div className="flex items-center gap-1.5 text-slate-500 text-xs">
+                <Calendar className="w-3.5 h-3.5" />
+                <span className="font-medium">{item.date}</span>
               </div>
-              <CardTitle className="healthcare-heading text-xl leading-tight">
+              <CardTitle className="mt-1 text-base md:text-lg leading-snug">
                 {item.headline}
               </CardTitle>
             </CardHeader>
-            <CardContent>
-              <p className="healthcare-body mb-4 leading-relaxed">{item.summary}</p>
-      
-              <Button variant="healthcare-outline" asChild>
+
+            {/* zero default CardContent padding */}
+            <CardContent className="p-0">
+              <p className="text-sm text-slate-600 leading-relaxed mb-3">
+                {item.summary}
+              </p>
+
+              <Button
+                variant="outline"
+                size="sm"
+                className="h-8 px-3"
+                asChild
+              >
                 <a href={item.link} target="_blank" rel="noopener noreferrer">
-                  <ExternalLink className="w-4 h-4 mr-2" />
+                  <ExternalLink className="w-3.5 h-3.5 mr-1" />
                   Read More
                 </a>
               </Button>
@@ -49,7 +60,6 @@ const Media = () => {
           </Card>
         ))}
       </div>
-
     </section>
   );
 };

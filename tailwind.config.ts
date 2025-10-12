@@ -11,6 +11,7 @@ export default {
           400:"#34D399", 500:"#10B981", 600:"#059669", 700:"#047857",
           800:"#065F46", 900:"#064E3B"
         },
+        primary: "#34D399",
       },
       boxShadow:{ soft:"0 8px 28px rgba(16,185,129,.18)" },
       borderRadius:{ xl:"1rem" }

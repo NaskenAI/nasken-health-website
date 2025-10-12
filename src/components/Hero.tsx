@@ -34,9 +34,9 @@ const Hero = () => {
         <button onClick={() => scrollTo("technology")} className="text-white/80 hover:text-leaf-400">
           Technology
         </button>
-        <button onClick={() => scrollTo("contact")} className="text-white/80 hover:text-leaf-400">
+        <Link to="/contact" className="text-white/80 hover:text-leaf-400">
           Contact
-        </button>
+        </Link>
         <Link to="/fellowships" className="text-white/80 hover:text-leaf-400">
           Nasken AI Health Fellowships
         </Link>
@@ -44,20 +44,21 @@ const Hero = () => {
 
       {/* Hero content */}
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
-        <h1 className="text-5xl md:text-6xl font-bold mb-6">
-          Nasken Health
-        </h1>
+        <h1 className="text-5xl md:text-6xl font-bold mb-6">Nasken Health</h1>
         <p className="text-xl md:text-2xl text-white/85 mb-8">
           Advancing digital health with privacy-first clinical AI.
         </p>
+
         <div className="flex items-center justify-center gap-3">
-          <a
-            href="#contact"
+          {/* Changed to React Router Link */}
+          <Link
+            to="/contact"
             className="rounded-lg px-5 py-3 font-medium text-white shadow-soft"
             style={{ background: "var(--btn)" }}
           >
             Get early access
-          </a>
+          </Link>
+
           <a
             href="#technology"
             className="rounded-lg px-5 py-3 font-medium border border-white/30 text-white hover:bg-white/10"

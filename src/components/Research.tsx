@@ -1,6 +1,6 @@
 import React from "react";
 
-const Stats = () => {
+const Research = () => {
   const stats = [
     { value: "1 in 5", label: "Adults experience mental-health challenges each year (APA 2024)" },
     { value: "75%", label: "Therapists report session time lost to manual note-taking and summaries" },
@@ -11,14 +11,14 @@ const Stats = () => {
   ];
 
   return (
-    <section className="bg-indigo-50 py-16">
-      <div className="max-w-6xl mx-auto px-4 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+    <section id="research" className="py-20 bg-ink-900 text-white">
+      <div className="max-w-6xl mx-auto px-6 text-center">
+        <h2 className="text-4xl font-semibold text-leaf-400 mb-4">
           Why AI-Assisted Journaling Matters
         </h2>
-        <p className="text-slate-600 max-w-2xl mx-auto mb-10">
+        <p className="text-white/80 max-w-2xl mx-auto mb-12 text-lg">
           Millions struggle to express emotions consistently between sessions.
-          AI-assisted journaling bridges that gap—transforming reflections into
+          AI-assisted journaling bridges that gap—turning reflections into
           structured insights clinicians can act on.
         </p>
 
@@ -26,12 +26,13 @@ const Stats = () => {
           {stats.map((s, i) => (
             <div
               key={i}
-              className="bg-white rounded-xl shadow-sm p-6 border hover:shadow-md transition"
+              className="rounded-xl border border-white/10 p-6 shadow-sm hover:shadow-soft transition"
+              style={{ background: "var(--card)" }}
             >
-              <div className="text-3xl md:text-4xl font-bold text-indigo-600 mb-1">
+              <div className="text-3xl md:text-4xl font-semibold text-leaf-400 mb-2">
                 {s.value}
               </div>
-              <div className="text-sm md:text-base text-slate-700 leading-snug">
+              <div className="text-sm md:text-base text-white/70 leading-snug">
                 {s.label}
               </div>
             </div>
@@ -42,4 +43,4 @@ const Stats = () => {
   );
 };
 
-export default Stats;
+export default Research;

@@ -86,7 +86,7 @@ const Media = () => {
               href={item.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-lg px-4 py-2 font-semibold mb-2 text-green-200"
+              className="inline-flex items-center gap-2 rounded-lg px-4 py-2 font-medium text-white shadow-soft text-sm"
               style={{ background: "var(--btn)" }}
             >
               <ExternalLink className="w-4 h-4" />

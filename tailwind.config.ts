@@ -5,19 +5,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        ink:{ 900:"#0A0E17" },
-        neon: {
-          cyan:"#00E5FF",
-          teal:"#00D1B2",
-          violet:"#7C3AED",
-          magenta:"#FF1CF7",
-          blue:"#1F6BFF"
-        }
+        ink:{ 900:"#0A0E17", 800:"#0F1824" },
+        leaf: {
+          50:"#ECFDF5", 100:"#D1FAE5", 200:"#A7F3D0", 300:"#6EE7B7",
+          400:"#34D399", 500:"#10B981", 600:"#059669", 700:"#047857",
+          800:"#065F46", 900:"#064E3B"
+        },
       },
-      boxShadow:{
-        glow:"0 10px 40px rgba(0,229,255,.25)",
-        glow2:"0 10px 40px rgba(124,58,237,.28)"
-      },
+      boxShadow:{ soft:"0 8px 28px rgba(16,185,129,.18)" },
       borderRadius:{ xl:"1rem" }
     },
   },

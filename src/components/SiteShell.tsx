@@ -1,41 +1,27 @@
-// src/components/SiteShell.tsx
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+
 export default function SiteShell({ children }: { children: React.ReactNode }) {
   return (
-    <div className="min-h-screen flex flex-col">
-      <header className="border-b">
-        <nav className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-          <Link to="/" className="font-semibold">Nasken Health</Link>
-          <div className="flex items-center gap-6 text-sm">
-            <Link to="/fellowships" className="hover:underline">Fellowships</Link>
-            <a href="#contact" className="hover:underline">Contact</a>
+    <div className="min-h-screen flex flex-col bg-ink-900 text-white">
+      <header className="border-b border-white/10">
+        <nav className="section h-16 flex items-center justify-between">
+          <Link to="/" className="font-semibold tracking-tight">Nasken Health</Link>
+          <div className="hidden md:flex items-center gap-6 text-sm text-white/80">
+            <a href="#solutions" className="hover:text-white">Solutions</a>
+            <a href="#technology" className="hover:text-white">Technology</a>
+            <a href="#media" className="hover:text-white">News</a>
+            <NavLink to="/fellowships" className="hover:text-white">Fellowships</NavLink>
           </div>
+          <a
+            href="#contact"
+            className="rounded-lg px-4 py-2 text-sm font-medium shadow-soft"
+            style={{ background:"var(--btn)" }}
+          >
+            Request demo
+          </a>
         </nav>
       </header>
       <main className="flex-1">{children}</main>
-      <footer className="border-t">
-        <div className="max-w-6xl mx-auto px-4 py-8 text-sm text-slate-600">
-          <div className="grid md:grid-cols-3 gap-6">
-            <div>
-              <div className="font-medium mb-2">About</div>
-              <p>Privacy-preserving clinical AI for usable insights.</p>
-            </div>
-            <div>
-              <div className="font-medium mb-2">Trust</div>
-              <ul className="space-y-1 list-disc pl-5">
-                <li>HIPAA-aligned security</li>
-                <li>Encryption in transit/at rest</li>
-                <li>Audit logging & RBAC</li>
-              </ul>
-            </div>
-            <div id="contact">
-              <div className="font-medium mb-2">Contact</div>
-              <a className="underline" href="mailto:contact@nasken.ai">contact@nasken.ai</a>
-            </div>
-          </div>
-          <div className="mt-6 text-xs">© {new Date().getFullYear()} Nasken Health</div>
-        </div>
-      </footer>
     </div>
   );
 }

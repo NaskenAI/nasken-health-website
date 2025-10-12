@@ -25,7 +25,7 @@ const Contact = () => {
   return (
     <section id="contact" className="py-20 bg-ink-900 text-white">
       <div className="text-center mb-12">
-        <h2 className="text-4xl font-semibold text-leaf-400 mb-4">
+        <h2 className="text-4xl font-semibold text-white mb-4">
           Contact & Partnerships
         </h2>
         <p className="text-lg text-white/80 max-w-3xl mx-auto">
@@ -44,11 +44,9 @@ const Contact = () => {
             <div className="flex justify-center mb-4">{contact.icon}</div>
             <h3 className="font-semibold text-lg mb-2">{contact.title}</h3>
             <p className="text-sm text-white/70 mb-6">{contact.description}</p>
-
             <button
               onClick={() => window.open(`mailto:${contact.email}`, "_blank")}
-              className="rounded-lg px-5 py-3 font-medium text-white shadow-soft"
-              style={{ background: "var(--btn)" }}
+              className="rounded-lg px-5 py-3 font-medium text-gray-900 bg-white hover:bg-gray-100 transition shadow-sm"
             >
               Contact Us
             </button>

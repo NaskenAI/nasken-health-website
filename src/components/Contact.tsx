@@ -1,64 +1,71 @@
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Mail, Users, FileText, Phone } from "lucide-react";
+import { Mail, Users, FileText } from "lucide-react";
 
 const Contact = () => {
   const contactTypes = [
     {
-      icon: <Users className="w-6 h-6" />,
+      icon: <Users className="w-6 h-6 text-leaf-400" />,
       title: "Partnerships",
       description: "Clinical collaborations and research partnerships",
       email: "contact@nasken.ai"
     },
     {
-      icon: <FileText className="w-6 h-6" />,
+      icon: <FileText className="w-6 h-6 text-leaf-400" />,
       title: "Research Collaboration",
-      description: "Academic partnerships and joint research initiatives", 
+      description: "Academic partnerships and joint research initiatives",
       email: "contact@nasken.ai"
     },
-        {
-      icon: <FileText className="w-6 h-6" />,
+    {
+      icon: <Mail className="w-6 h-6 text-leaf-400" />,
       title: "General Contact",
-      description: "For all other inquiries or to discuss how Nasken Health can support your organization's digital health initiatives", 
+      description: "For all other inquiries or to discuss how Nasken Health can support your organization's digital health initiatives",
       email: "contact@nasken.ai"
     }
   ];
 
   return (
-    <section id="contact" className="healthcare-section bg-muted/30">
+    <section id="contact" className="py-20 bg-ink-900 text-white">
       <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold healthcare-heading mb-4">
+        <h2 className="text-4xl font-semibold text-leaf-400 mb-4">
           Contact & Partnerships
         </h2>
-        <p className="text-lg healthcare-body max-w-3xl mx-auto mb-8">
-          For collaborations, or partnership discussions, 
-          we welcome conversations that advance digital health innovation.
+        <p className="text-lg text-white/80 max-w-3xl mx-auto">
+          We welcome conversations that advance digital health innovation.  
+          Reach out to explore collaboration or partnership opportunities.
         </p>
       </div>
 
-      <div className="grid md:grid-cols-3 gap-6 mb-12">
+      <div className="section grid md:grid-cols-3 gap-8 mb-12">
         {contactTypes.map((contact, index) => (
-          <Card key={index} className="healthcare-card text-center hover:border-healthcare-teal/50 transition-colors duration-200">
-            <CardContent className="pt-6">
-              <div className="flex justify-center text-healthcare-teal mb-4">
-                {contact.icon}
-              </div>
-              <h3 className="font-semibold healthcare-heading text-lg mb-2">
-                {contact.title}
-              </h3>
-              <p className="healthcare-body text-sm mb-4">
-                {contact.description}
-              </p>
-              <Button 
-                variant="healthcare-outline"
-                className="text-sm"
-                onClick={() => window.open(`mailto:${contact.email}`, "_blank")}
-              >
-                Contact Us
-              </Button>
-            </CardContent>
-          </Card>
+          <div
+            key={index}
+            className="rounded-xl border border-white/10 text-center p-8 hover:shadow-soft transition"
+            style={{ background: "var(--card)" }}
+          >
+            <div className="flex justify-center mb-4">{contact.icon}</div>
+            <h3 className="font-semibold text-lg mb-2">{contact.title}</h3>
+            <p className="text-sm text-white/70 mb-6">{contact.description}</p>
+
+            <button
+              onClick={() => window.open(`mailto:${contact.email}`, "_blank")}
+              className="rounded-lg px-5 py-3 font-medium text-white shadow-soft"
+              style={{ background: "var(--btn)" }}
+            >
+              Contact Us
+            </button>
+          </div>
         ))}
+      </div>
+
+      <div className="text-center mt-10 text-white/60 text-sm">
+        <p>
+          You can also reach us at{" "}
+          <a
+            href="mailto:contact@nasken.ai"
+            className="text-leaf-400 hover:text-leaf-300 underline underline-offset-4"
+          >
+            contact@nasken.ai
+          </a>
+        </p>
       </div>
     </section>
   );

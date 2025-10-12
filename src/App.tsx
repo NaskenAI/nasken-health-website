@@ -6,7 +6,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Fellowships from "./pages/Fellowships";
-import SiteShell from "@/components/SiteShell"; // <-- import the wrapper
+import Contact from "./pages/Contact"; // <-- add this import
+import SiteShell from "@/components/SiteShell";
 
 const queryClient = new QueryClient();
 
@@ -19,6 +20,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/fellowships" element={<Fellowships />} />
+          <Route path="/contact" element={<Contact />} /> {/* <-- new route */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>

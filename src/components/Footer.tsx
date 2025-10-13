@@ -98,18 +98,19 @@ const Footer = () => {
         {/* divider */}
         <div className="h-px w-full bg-white/10 mb-6" />
 
-      {/* bottom bar */}
-      <div className="text-center text-white/70 text-sm">
-        <p>© {new Date().getFullYear()} Nasken Inc. All rights reserved.</p>
-        <p className="mt-2">
-          <Link to="/privacy" className="hover:text-white underline underline-offset-4">
-            Privacy Policy
-          </Link>{" "}
-          ·{" "}
-          <Link to="/terms" className="hover:text-white underline underline-offset-4">
-            Terms of Service
-          </Link>
-        </p>
+        {/* bottom bar */}
+        <div className="text-center text-white/70 text-sm">
+          <p>© {new Date().getFullYear()} Nasken Inc. All rights reserved.</p>
+          <p className="mt-2">
+            <Link to="/privacy" className="hover:text-white underline underline-offset-4">
+              Privacy Policy
+            </Link>{" "}
+            ·{" "}
+            <Link to="/terms" className="hover:text-white underline underline-offset-4">
+              Terms of Service
+            </Link>
+          </p>
+        </div>
       </div>
     </footer>
   );

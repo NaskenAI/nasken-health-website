@@ -12,7 +12,7 @@ const Technology = () => {
       icon: <Globe className="w-8 h-8 text-emerald-400" />,
       title: "Interoperable Architecture",
       description:
-        "FHIR/HL7-based data exchange enabling seamless integration with EHR systems, remote monitoring platforms, and clinical dashboards.",
+        "FHIR/HL7-based data exchange enabling seamless integration with EHR systems and clinical dashboards.",
     },
     {
       icon: <Lock className="w-8 h-8 text-emerald-400" />,

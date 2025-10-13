@@ -6,7 +6,7 @@ import Technology from "@/components/Technology";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Newsletter from "@/components/NewsLetter";
-import Newsletter from "@/components/Traction";
+import Traction from "@/components/Traction";
 
 const Index = () => {
   return (

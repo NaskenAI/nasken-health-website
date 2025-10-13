@@ -28,9 +28,6 @@ const Hero = () => {
         <button onClick={() => scrollTo("about")} className="text-white/80 hover:text-leaf-400">
           About
         </button>
-        <button onClick={() => scrollTo("research")} className="text-white/80 hover:text-leaf-400">
-          Research
-        </button>
         <button onClick={() => scrollTo("technology")} className="text-white/80 hover:text-leaf-400">
           Technology
         </button>

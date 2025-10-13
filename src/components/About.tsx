@@ -19,8 +19,7 @@ const About = () => {
               and modern digital intelligence.
             </p>
             <p>
-              Current work includes pilots on AI-supported therapy sessions and remote
-              patient monitoring that enhances engagement and clinical outcomes. Our
+              Current work includes pilots on AI-supported therapy sessions summarization tool that enhances engagement and clinical outcomes. Our
               applied research directly translates into measurable improvements in care.
             </p>
           </div>

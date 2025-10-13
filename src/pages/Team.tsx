@@ -1,4 +1,6 @@
+// src/pages/Team.tsx
 import { LinkedinIcon, Mail } from "lucide-react";
+import { Link } from "react-router-dom";
 import Footer from "@/components/Footer";
 
 export default function Team() {
@@ -17,7 +19,7 @@ export default function Team() {
 
       {/* Team section */}
       <section className="section pb-20">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 justify-items-center">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 justify-items-center">
           {/* Founder */}
           <div className="text-center border border-slate-200 rounded-2xl p-8 hover:shadow-soft transition w-full max-w-sm">
             <img
@@ -25,7 +27,7 @@ export default function Team() {
               alt="Sandesh GV"
               className="w-32 h-32 mx-auto rounded-full mb-5 object-cover"
             />
-            <h3 className="text-xl font-semibold">Sandesh GV</h3>
+            <h3 className="text-xl font-semibold">Sandesh GV/h3>
             <p className="text-leaf-600 font-medium mb-3">Founder & CEO</p>
             <p className="text-sm text-ink-900/70 leading-relaxed">
               Engineering leader with 12+ years of experience in AI and software systems.
@@ -77,12 +79,12 @@ export default function Team() {
             <p className="text-leaf-600 font-medium mb-3">Incoming</p>
             <p className="text-sm text-ink-900/70 leading-relaxed">
               Joining the engineering team to contribute to front-end and data
-              integration pipelines for Nasken Health’s AI-powered journaling.
+              integration pipelines for Nasken Health’s AI-powered journaling and
+              remote patient monitoring platform.
             </p>
           </div>
-        </div>
-        
-        {/* Careers invitation */}
+
+          {/* Careers invitation */}
           <Link
             to="/careers"
             className="text-center border border-dashed border-slate-300 rounded-2xl p-8 hover:shadow-soft transition w-full max-w-sm flex flex-col items-center justify-center text-ink-900/70 hover:text-ink-900"
@@ -101,6 +103,7 @@ export default function Team() {
           </Link>
         </div>
       </section>
+
       {/* Shared footer */}
       <Footer />
     </main>

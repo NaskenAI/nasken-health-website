@@ -7,8 +7,8 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Fellowships from "./pages/Fellowships";
 import Contact from "./pages/Contact"; 
-import Contact from "./pages/Privacy"; 
-import Contact from "./pages/Terms"; 
+// import Contact from "./pages/Privacy"; 
+// import Contact from "./pages/Terms"; 
 import SiteShell from "@/components/SiteShell";
 
 const queryClient = new QueryClient();
@@ -23,8 +23,8 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/fellowships" element={<Fellowships />} />
           <Route path="/contact" element={<Contact />} /> 
-          <Route path="/privacy" element={<Privacy />} /> 
-          <Route path="/terms" element={<Terms />} /> 
+          {/* <Route path="/privacy" element={<Privacy />} /> 
+          <Route path="/terms" element={<Terms />} />  */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>

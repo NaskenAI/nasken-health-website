@@ -6,6 +6,7 @@ import Technology from "@/components/Technology";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Newsletter from "@/components/NewsLetter";
+import Newsletter from "@/components/Traction";
 
 const Index = () => {
   return (
@@ -14,6 +15,7 @@ const Index = () => {
       <About />
       <Research />
       <Media />
+      <Traction />
       <Technology />
       <Contact />
       <Newsletter /> 

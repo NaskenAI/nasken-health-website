@@ -13,7 +13,7 @@ const About = () => {
 
           <div className="space-y-6 text-white/80">
             <p>
-              Nasken Health is a Boston-based digital health company founded in 2025,
+              Nasken Health is a Boston-based digital health company,
               developing AI-powered solutions for mental health and patient engagement.
               Our mission is to bridge the gap between traditional healthcare delivery
               and modern digital intelligence.

@@ -11,17 +11,26 @@ export default function Careers() {
           Careers
         </h1>
         <p className="text-ink-900/70 max-w-2xl mx-auto">
-          No current openings. You can still share your resume and we’ll reach out if there’s a fit.
+          No current openings. You can still share your LinkedIn profile, and we’ll reach out if there’s a fit.
         </p>
       </section>
 
       {/* Submission form */}
       <section className="section pb-20 max-w-3xl mx-auto">
         <form
-          action="https://formspree.io/f/mayvlxyz" /* replace with your Formspree endpoint */
+          action="https://formspree.io/f/mqaygpaa"
           method="POST"
           className="grid grid-cols-1 gap-4"
         >
+          {/* Redirect on success */}
+          <input
+            type="hidden"
+            name="_redirect"
+            value="https://www.naskenhealth.com/#/careers?sent=1"
+          />
+          {/* Anti-spam honeypot */}
+          <input type="text" name="_gotcha" style={{ display: "none" }} />
+
           <div>
             <label className="block text-sm text-ink-900/70 mb-1">Full name *</label>
             <input
@@ -44,21 +53,12 @@ export default function Careers() {
           </div>
 
           <div>
-            <label className="block text-sm text-ink-900/70 mb-1">LinkedIn</label>
+            <label className="block text-sm text-ink-900/70 mb-1">LinkedIn Profile *</label>
             <input
               name="linkedin"
-              className="w-full rounded-lg border border-slate-300 p-3 focus:outline-none focus:ring-2 focus:ring-leaf-400"
-              placeholder="https://www.linkedin.com/in/username"
-            />
-          </div>
-
-          <div>
-            <label className="block text-sm text-ink-900/70 mb-1">Resume URL *</label>
-            <input
-              name="resume_url"
               required
               className="w-full rounded-lg border border-slate-300 p-3 focus:outline-none focus:ring-2 focus:ring-leaf-400"
-              placeholder="Link to PDF or portfolio"
+              placeholder="https://www.linkedin.com/in/username"
             />
           </div>
 
@@ -68,7 +68,7 @@ export default function Careers() {
               name="message"
               rows={6}
               className="w-full rounded-lg border border-slate-300 p-3 focus:outline-none focus:ring-2 focus:ring-leaf-400"
-              placeholder="Role interest, timeline, location, etc."
+              placeholder="Tell us about your interests, skills, or goals."
             />
           </div>
 
@@ -84,15 +84,18 @@ export default function Careers() {
               type="submit"
               className="inline-flex items-center justify-center rounded-lg border-2 border-ink-900 px-5 py-3 text-ink-900 hover:bg-ink-900 hover:text-white transition"
             >
-              Submit resume
+              Submit
             </button>
           </div>
         </form>
 
         {/* Email fallback */}
         <p className="mt-6 text-sm text-ink-900/70">
-          Prefer email? Send your resume to{" "}
-          <a href="mailto:contact@nasken.ai" className="text-leaf-600 hover:text-leaf-700 underline">
+          Prefer email? Send your LinkedIn profile or message to{" "}
+          <a
+            href="mailto:contact@nasken.ai"
+            className="text-leaf-600 hover:text-leaf-700 underline"
+          >
             contact@nasken.ai
           </a>
           .

@@ -28,6 +28,12 @@ const Hero = () => {
         <button onClick={() => scrollTo("about")} className="text-white/80 hover:text-leaf-400">
           About
         </button>
+        <Link to="/team" className="text-white/80 hover:text-leaf-400">
+          Team
+        </Link>
+        <Link to="/careers" className="text-white/80 hover:text-leaf-400">
+          Careers
+        </Link>
         <button onClick={() => scrollTo("technology")} className="text-white/80 hover:text-leaf-400">
           Technology
         </button>

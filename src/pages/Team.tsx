@@ -27,7 +27,7 @@ export default function Team() {
               alt="Sandesh Gubbi Virupaksha"
               className="w-32 h-32 mx-auto rounded-full mb-5 object-cover"
             />
-            <h3 className="text-xl font-semibold">Sandesh Gubbi Virupaksha</h3>
+            <h3 className="text-xl font-semibold">Sandesh GV</h3>
             <p className="text-leaf-600 font-medium mb-3">Founder & CEO</p>
             <p className="text-sm text-ink-900/70 leading-relaxed">
               Engineering leader with 12+ years of experience in AI and software systems.

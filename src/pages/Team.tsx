@@ -1,5 +1,3 @@
-
-// src/pages/Team.tsx
 import { LinkedinIcon, Mail } from "lucide-react";
 import Footer from "@/components/Footer";
 
@@ -20,19 +18,20 @@ export default function Team() {
       {/* Team section */}
       <section className="section pb-20">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 justify-items-center">
-          {/* Founder card */}
+          {/* Founder */}
           <div className="text-center border border-slate-200 rounded-2xl p-8 hover:shadow-soft transition w-full max-w-sm">
             <img
-              src="https://avatars.githubusercontent.com/u/00000000?v=4" // replace with your real photo
-              alt="Sandesh Gubbi Virupaksha"
+              src="https://avatars.githubusercontent.com/u/00000000?v=4"
+              alt="Sandesh GV"
               className="w-32 h-32 mx-auto rounded-full mb-5 object-cover"
             />
             <h3 className="text-xl font-semibold">Sandesh GV</h3>
             <p className="text-leaf-600 font-medium mb-3">Founder & CEO</p>
             <p className="text-sm text-ink-900/70 leading-relaxed">
               Engineering leader with 12+ years of experience in AI and software systems.
-              Formerly at Meta and Oracle, focused on building privacy-preserving
-              clinical AI and digital health platforms.
+              Formerly at Meta and Oracle, building privacy-preserving clinical AI
+              and digital health platforms integrating patient-generated data and
+              predictive analytics.
             </p>
 
             <div className="flex items-center justify-center gap-4 mt-4">
@@ -55,18 +54,30 @@ export default function Team() {
             </div>
           </div>
 
-          {/* Placeholder */}
-          <div className="text-center border border-dashed border-slate-300 rounded-2xl p-8 text-ink-900/60 max-w-sm">
-            <p className="text-lg font-medium mb-1">We’re growing</p>
-            <p className="text-sm">
-              Interested in joining our mission?{" "}
-              <a
-                href="mailto:contact@nasken.ai"
-                className="text-leaf-600 hover:text-leaf-700 underline"
-              >
-                Reach out
-              </a>{" "}
-              to collaborate.
+          {/* Incoming Principal Engineer */}
+          <div className="text-center border border-slate-200 rounded-2xl p-8 hover:shadow-soft transition w-full max-w-sm">
+            <div className="w-32 h-32 mx-auto mb-5 rounded-full bg-slate-100 flex items-center justify-center text-ink-900/40 text-xl font-semibold">
+              Incoming
+            </div>
+            <h3 className="text-xl font-semibold">Principal Software Engineer — AI/ML</h3>
+            <p className="text-leaf-600 font-medium mb-3">Incoming</p>
+            <p className="text-sm text-ink-900/70 leading-relaxed">
+              Will lead core AI architecture and model development across 
+              journaling summarization, clinical NLP, and multimodal health data
+              pipelines. Focus on scaling responsible AI frameworks in healthcare.
+            </p>
+          </div>
+
+          {/* Incoming Software Engineering Intern */}
+          <div className="text-center border border-slate-200 rounded-2xl p-8 hover:shadow-soft transition w-full max-w-sm">
+            <div className="w-32 h-32 mx-auto mb-5 rounded-full bg-slate-100 flex items-center justify-center text-ink-900/40 text-xl font-semibold">
+              Incoming
+            </div>
+            <h3 className="text-xl font-semibold">Software Engineering Intern</h3>
+            <p className="text-leaf-600 font-medium mb-3">Incoming</p>
+            <p className="text-sm text-ink-900/70 leading-relaxed">
+              Joining the engineering team to contribute to front-end and data
+              integration pipelines for Nasken Health’s AI-powered journaling.
             </p>
           </div>
         </div>

@@ -10,6 +10,7 @@ import Contact from "./pages/Contact";
 import Privacy from "./pages/Privacy";   
 import Terms from "./pages/Terms";       
 import Team from "./pages/Team";
+import Careers from "./pages/Careers";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/privacy" element={<Privacy />} />  
           <Route path="/terms" element={<Terms />} />  
           <Route path="/team" element={<Team />} />
+          <Route path="/careers" element={<Careers />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>

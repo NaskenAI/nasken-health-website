@@ -49,9 +49,15 @@ const Footer = () => {
               <button onClick={() => handleScroll("technology")} className="text-left hover:text-white">
                 Technology
               </button>
-              <button onClick={() => handleScroll("contact")} className="text-left hover:text-white">
+              <Link to="/team" className="hover:text-white">
+                Team
+              </Link>
+              <Link to="/careers" className="hover:text-white">
+                Careers
+              </Link>
+              <Link to="/contact" className="hover:text-white">
                 Contact
-              </button>
+              </Link>
               <Link to="/fellowships" className="hover:text-white">
                 Nasken AI Health Fellowships
               </Link>

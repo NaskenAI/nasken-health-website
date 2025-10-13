@@ -32,7 +32,7 @@ const Technology = () => {
     <section id="technology" className="py-20 bg-ink-900 text-white">
       <div className="text-center mb-12">
         <h2 className="text-4xl font-semibold text-white mb-4">
-          Technology Approach
+          Technology
         </h2>
         <p className="text-white/80 text-lg max-w-3xl mx-auto">
           Our stack combines AI precision, privacy-preserving design, and interoperability — built for clinicians and patients alike.

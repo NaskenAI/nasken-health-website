@@ -8,7 +8,7 @@ const Terms = () => {
           Terms of Service
         </h1>
 
-        <p className="text-slate-700 mb-6">https://github.com/NaskenAI/nasken-health/blob/main/src/pages/Terms.tsx
+        <p className="text-slate-700 mb-6">
           NASKEN INC. (“Nasken Health”), responsible for this website,
           informs all users of the terms and conditions applicable when
           accessing and using this website.
@@ -112,8 +112,30 @@ const Terms = () => {
         </p>
       </section>
 
-      {/* Shared footer */}
-      <Footer />
+      {/* Footer */}
+      <section className="bg-ink-900 text-white">
+        <div className="max-w-6xl mx-auto px-4 py-14 grid md:grid-cols-2 gap-8 items-start">
+          <div>
+            <div className="text-2xl font-semibold">Nasken Health</div>
+            <p className="mt-2 text-white/80">AI-powered clinical insights</p>
+          </div>
+          <ul className="text-white/80 space-y-2">
+            <li><a href="#about" className="hover:text-white">About</a></li>
+            <li><a href="#technology" className="hover:text-white">Technology</a></li>
+            <li><a href="#media" className="hover:text-white">News</a></li>
+            <li><a href="#contact" className="hover:text-white">Contact</a></li>
+            <li><a href="https://www.linkedin.com/company/nasken-health/" className="hover:text-white">LinkedIn</a></li>
+          </ul>
+        </div>
+        <div className="max-w-6xl mx-auto px-4 pb-10 text-xs text-white/60 space-y-2">
+          <p>© {new Date().getFullYear()} Nasken Inc. All rights reserved.</p>
+          <p>867 Boylston Street, 5th Floor, Boston, MA 02116, USA</p>
+          <p>
+            <a href="/privacy" className="hover:text-white">Privacy Policy</a> ·{" "}
+            <a href="/terms" className="hover:text-white">Terms of Service</a>
+          </p>
+        </div>
+      </section>
     </main>
   );
 };

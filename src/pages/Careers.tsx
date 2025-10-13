@@ -1,5 +1,5 @@
 // src/pages/Careers.tsx
-import Footer from "@/components/Footer";
+import Footer from "@/components/Footer-2";
 import { Link } from "react-router-dom";
 
 export default function Careers() {

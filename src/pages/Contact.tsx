@@ -1,7 +1,7 @@
 // src/pages/Contact.tsx
 import { useSearchParams, Link } from "react-router-dom";
 import { Mail, MapPin, CheckCircle2 } from "lucide-react";
-import Footer from "@/components/Footer";
+import Footer from "@/components/Footer-2";
 
 export default function Contact() {
   const [params] = useSearchParams();

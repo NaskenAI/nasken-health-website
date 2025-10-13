@@ -5,6 +5,7 @@ import Media from "@/components/Media";
 import Technology from "@/components/Technology";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import Newsletter from "@/components/NewsLetter";
 
 const Index = () => {
   return (
@@ -15,6 +16,7 @@ const Index = () => {
       <Media />
       <Technology />
       <Contact />
+      <Newsletter /> 
       <Footer />
     </div>
   );

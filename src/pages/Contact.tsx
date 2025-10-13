@@ -42,12 +42,22 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* Form */}
+        {/* Contact Form */}
         <form
-          action="https://formspree.io/f/mayvlxyz"
+          action="https://formspree.io/f/mqaygpaa"
           method="POST"
           className="grid grid-cols-1 md:grid-cols-2 gap-4"
         >
+          {/* Redirect after successful submission */}
+          <input
+            type="hidden"
+            name="_redirect"
+            value="https://www.naskenhealth.com/#/contact?sent=1"
+          />
+
+          {/* Honeypot field to block bots */}
+          <input type="text" name="_gotcha" style={{ display: "none" }} />
+
           <div>
             <label className="block text-sm text-ink-900/70 mb-1">First name *</label>
             <input
@@ -103,6 +113,7 @@ export default function Contact() {
             />
           </div>
 
+          {/* Privacy note */}
           <div className="md:col-span-2 text-sm text-ink-900/70 space-y-2">
             <p className="font-medium">We respect your data</p>
             <p>
@@ -114,6 +125,7 @@ export default function Contact() {
             </p>
           </div>
 
+          {/* Submit button */}
           <div className="md:col-span-2">
             <button
               type="submit"

@@ -66,7 +66,7 @@ const Hero = () => {
             href="#technology"
             className="rounded-lg px-5 py-3 font-medium border border-white/30 text-white hover:bg-white/10"
           >
-            See technology
+            Request Demo
           </a>
         </div>
       </div>

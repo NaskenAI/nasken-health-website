@@ -32,8 +32,7 @@ export default function Team() {
             <p className="text-sm text-ink-900/70 leading-relaxed">
               Engineering leader with 12+ years of experience in AI and software systems.
               Formerly at Meta and Oracle, focused on building privacy-preserving
-              clinical AI and digital health platforms. IEEE Senior Member and U.S.
-              patent inventor.
+              clinical AI and digital health platforms.
             </p>
 
             <div className="flex items-center justify-center gap-4 mt-4">

@@ -81,8 +81,26 @@ export default function Team() {
             </p>
           </div>
         </div>
+        
+        {/* Careers invitation */}
+          <Link
+            to="/careers"
+            className="text-center border border-dashed border-slate-300 rounded-2xl p-8 hover:shadow-soft transition w-full max-w-sm flex flex-col items-center justify-center text-ink-900/70 hover:text-ink-900"
+          >
+            <div className="w-32 h-32 mb-5 rounded-full bg-slate-50 flex items-center justify-center">
+              <span className="text-ink-900/40 font-semibold text-lg">Join Us</span>
+            </div>
+            <h3 className="text-lg font-medium mb-2">Interested in joining our mission?</h3>
+            <p className="text-sm">
+              Explore opportunities at{" "}
+              <span className="text-leaf-600 underline hover:text-leaf-700">
+                Nasken Health Careers
+              </span>
+              .
+            </p>
+          </Link>
+        </div>
       </section>
-
       {/* Shared footer */}
       <Footer />
     </main>

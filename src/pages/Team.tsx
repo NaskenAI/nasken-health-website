@@ -1,7 +1,7 @@
 // src/pages/Team.tsx
 import { LinkedinIcon, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
-import Footer from "@/components/Footer";
+import Footer from "@/components/Footer-2";
 
 export default function Team() {
   return (

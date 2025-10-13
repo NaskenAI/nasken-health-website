@@ -4,10 +4,10 @@ const Media = () => {
   const mediaItems = [
     {
       headline: "How journaling supports mental health",
-      date: "Harvard Health Publishing",
+      date: "University of Rochester Medical Center",
       summary:
         "Overview of evidence and practical ways journaling can reduce stress, clarify thoughts, and support therapy.",
-      link: "https://www.health.harvard.edu/healthbeat/how-journaling-can-help-you-in-hard-times",
+      link: "https://www.urmc.rochester.edu/encyclopedia/content?ContentTypeID=1&ContentID=4552#:~:text=Journaling%20helps%20control%20your%20symptoms,and%20identifying%20negative%20thoughts%20and",
     },
     {
       headline: "What is Patient-Generated Health Data (PGHD)?",

@@ -3,46 +3,46 @@ import { Calendar, ExternalLink } from "lucide-react";
 const Media = () => {
   const mediaItems = [
     {
-      headline: "AI Clinical Copilots Gain Traction in Health Systems",
-      date: "September 2025",
+      headline: "How journaling supports mental health",
+      date: "Harvard Health Publishing",
       summary:
-        "Hospitals adopt 'agentic AI' for scheduling, documentation, and decision support, signaling a shift from isolated tools to AI workflows.",
-      link: "https://www.beckershospitalreview.com/healthcare-information-technology/ai/2025-is-becoming-the-year-of-ai-agents-in-healthcare/?utm_source=chatgpt.com",
+        "Overview of evidence and practical ways journaling can reduce stress, clarify thoughts, and support therapy.",
+      link: "https://www.health.harvard.edu/healthbeat/how-journaling-can-help-you-in-hard-times",
     },
     {
-      headline: "FDA to Review Generative AI Mental Health Tools",
-      date: "September 11, 2025",
+      headline: "What is Patient-Generated Health Data (PGHD)?",
+      date: "HealthIT.gov",
       summary:
-        "Digital Health Advisory Committee plans November meeting to address safety and efficacy of generative AI in mental health applications.",
-      link: "https://www.statnews.com/2025/09/11/fda-dhac-digital-health-ai-mental-health/?utm_source=chatgpt.com",
+        "Federal overview of PGHD, its sources, and how it augments clinical decision-making and care coordination.",
+      link: "https://www.healthit.gov/topic/scientific-initiatives/pcor/patient-generated-health-data-pghd",
     },
     {
-      headline: "Doctors Develop AI Stethoscope for Rapid Heart Disease Detection",
-      date: "August 30, 2025",
+      headline: "Technology and the future of mental health treatment",
+      date: "NIMH",
       summary:
-        "UK team and Eko Health create stethoscope diagnosing heart failure, valve disease, and arrhythmias within 15 seconds.",
-      link: "https://www.theguardian.com/technology/2025/aug/30/doctors-ai-stethoscope-heart-disease-london?utm_source=chatgpt.com",
+        "NIMH guidance on mobile apps, telehealth, sensors, and the promise and limits of digital mental health.",
+      link: "https://www.nimh.nih.gov/health/topics/technology-and-the-future-of-mental-health-treatment",
     },
     {
-      headline: "Samsung Galaxy Watches to Detect Heart Failure Risk",
-      date: "August 2025",
+      headline: "Conversational agents for mental health: scoping review",
+      date: "npj Digital Medicine (2024)",
       summary:
-        "Next-generation Galaxy Watches will integrate AI and PPG sensors to flag left ventricular dysfunction.",
-      link: "https://www.androidcentral.com/wearables/samsung-galaxy-watch/samsung-galaxy-watches-will-soon-detect-warning-signs-for-heart-failure?utm_source=chatgpt.com",
+        "Systematic synthesis of mental-health chatbots, use cases, outcomes, and safety considerations.",
+      link: "https://www.nature.com/articles/s41746-024-01261-2",
     },
     {
-      headline: "Global South Faces AI Divide in Healthcare",
-      date: "July 2025",
+      headline: "Patient-generated data improves patient-provider communication",
+      date: "JMIR Medical Informatics (2024)",
       summary:
-        "WHO raises concerns that low- and middle-income countries lag in AI health adoption due to infrastructure and regulatory gaps.",
-      link: "https://medicalxpress.com/news/2025-07-ai-hindering-health-global-south.html?utm_source=chatgpt.com",
+        "Study showing how introducing PGHD changes communication behaviors and care interactions.",
+      link: "https://medinform.jmir.org/2024/1/e57406",
     },
     {
-      headline: "Women’s Health Startup Raises $50M for AI-Driven Menopause Care",
-      date: "October 2025",
+      headline: "App-based interventions for depression: clinical evidence",
+      date: "JAMA Network Open (2023)",
       summary:
-        "Midi Health expands AI-powered care for longevity and menopause management with new funding round.",
-      link: "https://www.businessinsider.com/womens-health-startup-midi-health-50-million-longevity-ai-2025-10?utm_source=chatgpt.com",
+        "Randomized-trial evidence on smartphone-based interventions as part of depression care.",
+      link: "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2812076",
     },
   ];
 

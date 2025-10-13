@@ -43,17 +43,16 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Quick Links</h4>
             <nav className="flex flex-col space-y-2 text-white/80">
-              <Link to="/fellowships" className="hover:text-white">
+              <Link to="/" className="hover:text-white">
                 Home
               </Link>
-              <Link to="/fellowships" className="hover:text-white">
+              <Link to="/team" className="hover:text-white">
                 Team
               </Link>
-              <Link to="/fellowships" className="hover:text-white">
+              <Link to="/careers" className="hover:text-white">
                 Careers
               </Link>
-              <Link to="/fel
-              <Link to="/fellowships" className="hover:text-white">
+              <Link to="/contact" className="hover:text-white">
                 Contact
               </Link>
               <Link to="/fellowships" className="hover:text-white">

@@ -7,29 +7,49 @@ const About = () => {
       <div className="section grid lg:grid-cols-2 gap-12 items-center">
         {/* Text */}
         <div>
-        <h2 className="text-4xl font-semibold text-white mb-4">
-          About Nasken Health
+          <h2 className="text-4xl font-semibold text-white mb-4">
+            About Nasken Health
           </h2>
 
           <div className="space-y-6 text-white/80">
             <p>
-              Nasken Health is a Boston-based digital health company,
-              developing AI-powered solutions for mental health and patient engagement.
-              Our mission is to bridge the gap between traditional healthcare delivery
-              and modern digital intelligence.
+              Nasken Health is a Boston-based digital health startup developing
+              AI-powered tools for remote patient monitoring, therapy data
+              summarization, and predictive health analytics. Our platform helps
+              clinicians and mental health professionals transform unstructured
+              notes and self-reported data into clear, actionable insights.
             </p>
             <p>
-              Current work includes pilots on AI-supported therapy sessions summarization tool that enhances engagement and clinical outcomes. Our
-              applied research directly translates into measurable improvements in care.
+              Our mission is to bridge the gap between traditional care delivery
+              and intelligent digital systems by securely analyzing patient-generated
+              data between visits. We use privacy-preserving machine learning to
+              support better engagement, early risk detection, and personalized care.
+            </p>
+            <p>
+              Current pilots include an AI-supported therapy session summarization
+              tool that assists clinicians in tracking progress, improving outcomes,
+              and enhancing collaboration across care teams.
             </p>
           </div>
 
           {/* Feature Tiles */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
             {[
-              { Icon: Brain, title: "AI-Powered", text: "Machine learning for personalized care" },
-              { Icon: Heart, title: "Patient-Centered", text: "Improving outcomes through engagement" },
-              { Icon: Shield, title: "Privacy-First", text: "HIPAA-compliant and secure by design" },
+              {
+                Icon: Brain,
+                title: "AI-Powered",
+                text: "Machine learning for real-time clinical insights",
+              },
+              {
+                Icon: Heart,
+                title: "Patient-Centered",
+                text: "Enhancing engagement and therapeutic outcomes",
+              },
+              {
+                Icon: Shield,
+                title: "Privacy-First",
+                text: "HIPAA-compliant and secure by design",
+              },
             ].map(({ Icon, title, text }) => (
               <div
                 key={title}

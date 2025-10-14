@@ -53,7 +53,6 @@ const Hero = () => {
         </p>
 
         <div className="flex items-center justify-center gap-3">
-          {/* Changed to React Router Link */}
           <Link
             to="/contact"
             className="rounded-lg px-5 py-3 font-medium text-white shadow-soft"
@@ -76,6 +75,19 @@ const Hero = () => {
         <div className="w-6 h-10 border-2 border-leaf-400 rounded-full flex justify-center">
           <div className="w-1 h-3 bg-leaf-400 rounded-full mt-2 animate-pulse" />
         </div>
+      </div>
+
+      {/* Static crawlable links for Google verification */}
+      <div className="absolute bottom-2 left-1/2 -translate-x-1/2 text-xs text-white/60">
+        <a href="https://www.naskenhealth.com/#/team" className="mx-2 underline">
+          Team
+        </a>
+        <a href="https://www.naskenhealth.com/#/careers" className="mx-2 underline">
+          Careers
+        </a>
+        <a href="https://www.naskenhealth.com/#/contact" className="mx-2 underline">
+          Contact
+        </a>
       </div>
     </section>
   );

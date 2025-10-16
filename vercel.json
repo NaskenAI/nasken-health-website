@@ -1,0 +1,11 @@
+{
+  "redirects": [
+    { "source": "/(.*)", "has": [{"type":"host","value":"naskenhealth.com"}],
+      "destination": "https://www.naskenhealth.com/:1", "permanent": true
+    },
+    { "source": "/index.html", "destination": "/", "permanent": true }
+  ],
+  "headers": [
+    { "source": "/(.*)", "headers": [{ "key": "Link", "value": "</:1>; rel=\"canonical\"" }] }
+  ]
+}

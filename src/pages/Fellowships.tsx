@@ -1,10 +1,19 @@
-// src/pages/Fellowships.tsx
+import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer-2";
 
 const Fellowships = () => {
   return (
     <main className="bg-white text-ink-900">
+      <Helmet>
+        <title>Fellowship — Nasken Health</title>
+        <meta
+          name="description"
+          content="Fellowship opportunity for psychology students interested in digital mental health research. Join Nasken Health's pilot study exploring AI-assisted therapy engagement."
+        />
+        <link rel="canonical" href="https://www.naskenhealth.com/fellowships" />
+      </Helmet>
+
       <section className="min-h-screen px-6 py-12">
         <div className="max-w-3xl mx-auto">
           {/* Heading + meta */}

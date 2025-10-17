@@ -26,7 +26,7 @@ export default function Careers() {
           <input
             type="hidden"
             name="_redirect"
-            value="https://www.naskenhealth.com/#/careers?sent=1"
+            value="https://www.naskenhealth.com/careers?sent=1"
           />
           {/* Anti-spam honeypot */}
           <input type="text" name="_gotcha" style={{ display: "none" }} />

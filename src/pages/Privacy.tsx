@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -6,6 +7,15 @@ const Privacy = () => {
 
   return (
     <main className="bg-white">
+      <Helmet>
+        <title>Privacy Policy — Nasken Health</title>
+        <meta
+          name="description"
+          content="Read the Privacy Policy for Nasken Health. Learn how we collect, use, and protect your personal information when you use our AI-driven health services."
+        />
+        <link rel="canonical" href="https://www.naskenhealth.com/privacy" />
+      </Helmet>
+
       <section className="max-w-3xl mx-auto px-4 py-16">
         <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 mb-2">
           Privacy Policy

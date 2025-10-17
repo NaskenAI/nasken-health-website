@@ -23,7 +23,7 @@ const Terms = () => {
 
         <h2 className="text-2xl font-semibold mt-10 mb-3">Identification Data</h2>
         <ul className="list-disc pl-5 space-y-2 text-slate-700 mb-6">
-          <li><strong>Domain name:</strong> www.naskenhealth.com</li>
+          <li><strong>Domain name:</strong> https://www.naskenhealth.com</li>
           <li><strong>Trade name:</strong> Nasken Health</li>
           <li><strong>Corporate name:</strong> Nasken Inc.</li>
           <li><strong>Company registration:</strong> Delaware C-Corp</li>

@@ -114,13 +114,13 @@ const Footer = () => {
 
         {/* static crawlable absolute links for verification */}
         <div className="mt-6 text-center text-xs text-white/60">
-          <a href="https://www.naskenhealth.com/#/team" className="mx-2 underline">
+          <a href="https://www.naskenhealth.com/team" className="mx-2 underline">
             Team
           </a>
-          <a href="https://www.naskenhealth.com/#/careers" className="mx-2 underline">
+          <a href="https://www.naskenhealth.com/careers" className="mx-2 underline">
             Careers
           </a>
-          <a href="https://www.naskenhealth.com/#/contact" className="mx-2 underline">
+          <a href="https://www.naskenhealth.com/contact" className="mx-2 underline">
             Contact
           </a>
         </div>

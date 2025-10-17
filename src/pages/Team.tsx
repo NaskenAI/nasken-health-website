@@ -1,4 +1,4 @@
-// src/pages/Team.tsx
+import { Helmet } from "react-helmet-async";
 import { LinkedinIcon, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 import Footer from "@/components/Footer-2";
@@ -6,6 +6,15 @@ import Footer from "@/components/Footer-2";
 export default function Team() {
   return (
     <main className="bg-white text-ink-900">
+      <Helmet>
+        <title>Our Team — Nasken Health</title>
+        <meta
+          name="description"
+          content="Meet the Nasken Health leadership team advancing trustworthy, privacy-preserving AI in healthcare, including founder Sandesh GV and incoming engineers."
+        />
+        <link rel="canonical" href="https://www.naskenhealth.com/team" />
+      </Helmet>
+
       {/* Header */}
       <section className="section py-16 text-center">
         <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-3">
@@ -104,7 +113,6 @@ export default function Team() {
         </div>
       </section>
 
-      {/* Shared footer */}
       <Footer />
     </main>
   );

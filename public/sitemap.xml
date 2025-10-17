@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://www.naskenhealth.com/</loc></url>
-  <url><loc>https://www.naskenhealth.com/about.html</loc></url>
-  <url><loc>https://www.naskenhealth.com/contact.html</loc></url>
+  <url><loc>https://www.naskenhealth.com/fellowships</loc></url>
+  <url><loc>https://www.naskenhealth.com/contact</loc></url>
+  <url><loc>https://www.naskenhealth.com/privacy</loc></url>
+  <url><loc>https://www.naskenhealth.com/terms</loc></url>
+  <url><loc>https://www.naskenhealth.com/team</loc></url>
+  <url><loc>https://www.naskenhealth.com/careers</loc></url>
 </urlset>

@@ -1,11 +1,11 @@
 {
   "redirects": [
-    { "source": "http://:path*", "destination": "https://www.naskenhealth.com/:path*", "permanent": true },
+    { "source": "http://naskenhealth.com/:path*", "destination": "https://www.naskenhealth.com/:path*", "permanent": true },
     { "source": "https://naskenhealth.com/:path*", "destination": "https://www.naskenhealth.com/:path*", "permanent": true },
     { "source": "https://*.vercel.app/:path*", "destination": "https://www.naskenhealth.com/:path*", "permanent": true }
   ],
   "rewrites": [
-    { "source": "/(.*)", "destination": "/" }  
+    { "source": "/(.*)", "destination": "/index.html" }
   ],
   "trailingSlash": false
 }

@@ -1,10 +1,19 @@
-// src/pages/Careers.tsx
+import { Helmet } from "react-helmet-async";
 import Footer from "@/components/Footer-2";
 import { Link } from "react-router-dom";
 
 export default function Careers() {
   return (
     <main className="bg-white text-ink-900">
+      <Helmet>
+        <title>Careers — Nasken Health</title>
+        <meta
+          name="description"
+          content="Explore career opportunities at Nasken Health. Share your LinkedIn profile to be considered for future roles in digital health and AI innovation."
+        />
+        <link rel="canonical" href="https://www.naskenhealth.com/careers" />
+      </Helmet>
+
       {/* Header */}
       <section className="section py-16 text-center">
         <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-3">
@@ -22,13 +31,11 @@ export default function Careers() {
           method="POST"
           className="grid grid-cols-1 gap-4"
         >
-          {/* Redirect on success */}
           <input
             type="hidden"
             name="_redirect"
             value="https://www.naskenhealth.com/careers?sent=1"
           />
-          {/* Anti-spam honeypot */}
           <input type="text" name="_gotcha" style={{ display: "none" }} />
 
           <div>
@@ -89,7 +96,6 @@ export default function Careers() {
           </div>
         </form>
 
-        {/* Email fallback */}
         <p className="mt-6 text-sm text-ink-900/70">
           Prefer email? Send your LinkedIn profile or message to{" "}
           <a

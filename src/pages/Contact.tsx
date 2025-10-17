@@ -60,7 +60,7 @@ export default function Contact() {
           className="grid grid-cols-1 md:grid-cols-2 gap-4"
         >
           {/* Redirect to show success banner */}
-          <input type="hidden" name="_redirect" value="https://www.naskenhealth.com/#/contact?sent=1" />
+          <input type="hidden" name="_redirect" value="https://www.naskenhealth.com/contact?sent=1" />
           {/* Optional subject for Formspree email */}
           <input type="hidden" name="_subject" value="New message from naskenhealth.com" />
           {/* Honeypot */}

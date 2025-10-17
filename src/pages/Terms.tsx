@@ -1,8 +1,18 @@
+import { Helmet } from "react-helmet-async";
 import React from "react";
 
 const Terms = () => {
   return (
     <main className="bg-white">
+      <Helmet>
+        <title>Terms of Service — Nasken Health</title>
+        <meta
+          name="description"
+          content="Review the Terms of Service for Nasken Health. Learn about user responsibilities, intellectual property, disclaimers, and applicable law for use of our website."
+        />
+        <link rel="canonical" href="https://www.naskenhealth.com/terms" />
+      </Helmet>
+
       <section className="max-w-3xl mx-auto px-4 py-16">
         <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 mb-4">
           Terms of Service

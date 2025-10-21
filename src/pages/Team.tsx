@@ -70,6 +70,7 @@ export default function Team() {
             <div className="w-32 h-32 mx-auto mb-5 rounded-full bg-slate-100 flex items-center justify-center text-ink-900/40 text-xl font-semibold">
               Incoming
             </div>
+            <h3 className="text-xl font-semibold">Uriah Thornes</h3>
             <h3 className="text-xl font-semibold">Principal Software Engineer — AI/ML</h3>
             <p className="text-leaf-600 font-medium mb-3">Incoming</p>
             <p className="text-sm text-ink-900/70 leading-relaxed">
@@ -84,6 +85,7 @@ export default function Team() {
             <div className="w-32 h-32 mx-auto mb-5 rounded-full bg-slate-100 flex items-center justify-center text-ink-900/40 text-xl font-semibold">
               Incoming
             </div>
+            <h3 className="text-xl font-semibold">Alex Audi</h3>
             <h3 className="text-xl font-semibold">Software Engineering Intern</h3>
             <p className="text-leaf-600 font-medium mb-3">Incoming</p>
             <p className="text-sm text-ink-900/70 leading-relaxed">

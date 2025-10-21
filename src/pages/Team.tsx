@@ -71,8 +71,7 @@ export default function Team() {
               Incoming
             </div>
             <h3 className="text-xl font-semibold">Uriah Thornes</h3>
-            <h3 className="text-xl font-semibold">Principal Software Engineer — AI/ML</h3>
-            <p className="text-leaf-600 font-medium mb-3">Incoming</p>
+            <p className="text-leaf-600 font-medium mb-3">Principal Software Engineer — AI/ML</p>
             <p className="text-sm text-ink-900/70 leading-relaxed">
               Will lead core AI architecture and model development across
               journaling summarization, clinical NLP, and multimodal health data
@@ -86,8 +85,7 @@ export default function Team() {
               Incoming
             </div>
             <h3 className="text-xl font-semibold">Alex Audi</h3>
-            <h3 className="text-xl font-semibold">Software Engineering Intern</h3>
-            <p className="text-leaf-600 font-medium mb-3">Incoming</p>
+            <p className="text-leaf-600 font-medium mb-3">Software Engineering Intern</p>
             <p className="text-sm text-ink-900/70 leading-relaxed">
               Joining the engineering team to contribute to front-end and data
               integration pipelines for Nasken Health’s AI-powered journaling and

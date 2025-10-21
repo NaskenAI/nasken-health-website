@@ -65,11 +65,13 @@ export default function Team() {
             </div>
           </div>
 
-          {/* Incoming Principal Engineer */}
+          {/* Principal Engineer */}
           <div className="text-center border border-slate-200 rounded-2xl p-8 hover:shadow-soft transition w-full max-w-sm">
-            <div className="w-32 h-32 mx-auto mb-5 rounded-full bg-slate-100 flex items-center justify-center text-ink-900/40 text-xl font-semibold">
-              Incoming
-            </div>
+            <img
+              src="/images/team/uriah-thornes.jpg"
+              alt="Uriah Thornes"
+              className="w-32 h-32 mx-auto rounded-full mb-5 object-cover"
+            />
             <h3 className="text-xl font-semibold">Uriah Thornes</h3>
             <p className="text-leaf-600 font-medium mb-3">Principal Software Engineer — AI/ML</p>
             <p className="text-sm text-ink-900/70 leading-relaxed">
@@ -77,13 +79,25 @@ export default function Team() {
               journaling summarization, clinical NLP, and multimodal health data
               pipelines. Focus on scaling responsible AI frameworks in healthcare.
             </p>
+
+            <div className="flex items-center justify-center gap-4 mt-4">
+              <a
+                href="mailto:uriah@nasken.ai"
+                className="text-ink-900 hover:text-leaf-600"
+                aria-label="Email Uriah"
+              >
+                <Mail className="w-5 h-5" />
+              </a>
+            </div>
           </div>
 
-          {/* Incoming Software Engineering Intern */}
+          {/* Software Engineering Intern */}
           <div className="text-center border border-slate-200 rounded-2xl p-8 hover:shadow-soft transition w-full max-w-sm">
-            <div className="w-32 h-32 mx-auto mb-5 rounded-full bg-slate-100 flex items-center justify-center text-ink-900/40 text-xl font-semibold">
-              Incoming
-            </div>
+            <img
+              src="/images/team/alex-audi.jpg"
+              alt="Alex Audi"
+              className="w-32 h-32 mx-auto rounded-full mb-5 object-cover"
+            />
             <h3 className="text-xl font-semibold">Alex Audi</h3>
             <p className="text-leaf-600 font-medium mb-3">Software Engineering Intern</p>
             <p className="text-sm text-ink-900/70 leading-relaxed">
@@ -91,6 +105,16 @@ export default function Team() {
               integration pipelines for Nasken Health’s AI-powered journaling and
               remote patient monitoring platform.
             </p>
+
+            <div className="flex items-center justify-center gap-4 mt-4">
+              <a
+                href="mailto:alex@nasken.ai"
+                className="text-ink-900 hover:text-leaf-600"
+                aria-label="Email Alex"
+              >
+                <Mail className="w-5 h-5" />
+              </a>
+            </div>
           </div>
 
           {/* Careers invitation */}

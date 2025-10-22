@@ -55,9 +55,6 @@ const ProductFlow = () => {
 
           {/* Workflow Summary */}
           <div className="pt-4 border-t border-white/10">
-            <h3 className="text-xl font-semibold mb-2 text-leaf-400">
-              How the Workflow Operates
-            </h3>
             <p className="text-white/75 text-sm leading-relaxed max-w-lg">
               The workflow transforms patient-generated journaling into structured, actionable insights 
               across three stages: capture, summarize, and visualize. Data flows securely from the patient 

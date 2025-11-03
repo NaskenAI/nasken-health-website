@@ -1,3 +1,4 @@
+// App.tsx
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { Toaster } from "@/components/ui/toaster";
@@ -13,6 +14,8 @@ import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import Team from "./pages/Team";
 import Careers from "./pages/Careers";
+// ✅ add this import
+import NvidiaInception from "./pages/News-NvidiaInception";
 
 const queryClient = new QueryClient();
 
@@ -32,90 +35,8 @@ const App = () => (
       <Sonner />
       <Router>
         <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <Helmet><title>Nasken Health</title></Helmet>
-                <Canonical path="/" />
-                <Index />
-              </>
-            }
-          />
-          <Route
-            path="/fellowships"
-            element={
-              <>
-                <Helmet><title>Fellowships — Nasken Health</title></Helmet>
-                <Canonical path="/fellowships" />
-                <Fellowships />
-              </>
-            }
-          />
-          <Route
-            path="/contact"
-            element={
-              <>
-                <Helmet><title>Contact — Nasken Health</title></Helmet>
-                <Canonical path="/contact" />
-                <Contact />
-              </>
-            }
-          />
-          <Route
-            path="/privacy"
-            element={
-              <>
-                <Helmet><title>Privacy — Nasken Health</title></Helmet>
-                <Canonical path="/privacy" />
-                <Privacy />
-              </>
-            }
-          />
-          <Route
-            path="/terms"
-            element={
-              <>
-                <Helmet><title>Terms — Nasken Health</title></Helmet>
-                <Canonical path="/terms" />
-                <Terms />
-              </>
-            }
-          />
-          <Route
-            path="/team"
-            element={
-              <>
-                <Helmet><title>Team — Nasken Health</title></Helmet>
-                <Canonical path="/team" />
-                <Team />
-              </>
-            }
-          />
-          <Route
-            path="/careers"
-            element={
-              <>
-                <Helmet><title>Careers — Nasken Health</title></Helmet>
-                <Canonical path="/careers" />
-                <Careers />
-              </>
-            }
-          />
-          <Route
-            path="*"
-            element={
-              <>
-                <Helmet><title>Not Found — Nasken Health</title></Helmet>
-                <Canonical path="/" />
-                <NotFound />
-              </>
-            }
-          />
-        </Routes>
-      </Router>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
-
-export default App;
+          <Route path="/" element={<><Helmet><title>Nasken Health</title></Helmet><Canonical path="/" /><Index /></>} />
+          <Route path="/fellowships" element={<><Helmet><title>Fellowships — Nasken Health</title></Helmet><Canonical path="/fellowships" /><Fellowships /></>} />
+          <Route path="/contact" element={<><Helmet><title>Contact — Nasken Health</title></Helmet><Canonical path="/contact" /><Contact /></>} />
+          <Route path="/privacy" element={<><Helmet><title>Privacy — Nasken Health</title></Helmet><Canonical path="/privacy" /><Privacy /></>} />
+          <Route path="/terms" element={<><Helmet><title>Terms — Nasken Health</title></Helme

@@ -114,6 +114,15 @@ export default function Team() {
               >
                 <Mail className="w-5 h-5" />
               </a>
+              <a
+                href="https://www.linkedin.com/in/alex-audi/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-ink-900 hover:text-leaf-600"
+                aria-label="LinkedIn"
+              >
+                <LinkedinIcon className="w-5 h-5" />
+              </a>
             </div>
           </div>
 

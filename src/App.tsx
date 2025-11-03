@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -13,7 +13,7 @@ import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import Team from "./pages/Team";
 import Careers from "./pages/Careers";
-import NvidiaInception from "./pages/News-NvidiaInception"; // ✅ added
+import NvidiaInception from "./pages/News-NvidiaInception";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +31,7 @@ const App = () => (
     <TooltipProvider delayDuration={80}>
       <Toaster />
       <Sonner />
+      {/* HashRouter prevents server 404s on deep links */}
       <Router>
         <Routes>
           <Route
@@ -103,7 +104,7 @@ const App = () => (
               </>
             }
           />
-          {/* ✅ NVIDIA Inception route */}
+          {/* News route */}
           <Route
             path="/news/nvidia-inception"
             element={

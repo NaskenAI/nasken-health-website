@@ -99,7 +99,7 @@ export default function Team() {
               className="w-32 h-32 mx-auto rounded-full mb-5 object-cover"
             />
             <h3 className="text-xl font-semibold">Alex Audi</h3>
-            <p className="text-leaf-600 font-medium mb-3">Software Engineer — AI/ML</p>
+            <p className="text-leaf-600 font-medium mb-3">Software Engineering Intern — AI/ML</p>
             <p className="text-sm text-ink-900/70 leading-relaxed">
               Works on AI/ML components for journaling summarization and clinical
               data modeling. Contributes to front-end integration and health data

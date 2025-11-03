@@ -10,7 +10,7 @@ export default function Team() {
         <title>Our Team — Nasken Health</title>
         <meta
           name="description"
-          content="Meet the Nasken Health leadership team advancing trustworthy, privacy-preserving AI in healthcare, including founder Sandesh GV and incoming engineers."
+          content="Meet the Nasken Health leadership team advancing trustworthy, privacy-preserving AI in healthcare, including Founder & CEO Sandesh GV and Head of Engineering Uriah Thornes."
         />
         <link rel="canonical" href="https://www.naskenhealth.com/team" />
       </Helmet>
@@ -65,7 +65,7 @@ export default function Team() {
             </div>
           </div>
 
-          {/* Principal Engineer */}
+          {/* Head of Engineering */}
           <div className="text-center border border-slate-200 rounded-2xl p-8 hover:shadow-soft transition w-full max-w-sm">
             <img
               src="/images/team/uriah-thornes.jpg"
@@ -73,11 +73,11 @@ export default function Team() {
               className="w-32 h-32 mx-auto rounded-full mb-5 object-cover"
             />
             <h3 className="text-xl font-semibold">Uriah Thornes</h3>
-            <p className="text-leaf-600 font-medium mb-3">Principal Software Engineer — AI/ML</p>
+            <p className="text-leaf-600 font-medium mb-3">Head of Engineering</p>
             <p className="text-sm text-ink-900/70 leading-relaxed">
-              Will lead core AI architecture and model development across
-              journaling summarization, clinical NLP, and multimodal health data
-              pipelines. Focus on scaling responsible AI frameworks in healthcare.
+              Leads Nasken’s AI and software engineering teams across journaling
+              summarization, clinical NLP, and multimodal health data pipelines.
+              Focused on building scalable, responsible AI frameworks in healthcare.
             </p>
 
             <div className="flex items-center justify-center gap-4 mt-4">
@@ -101,7 +101,7 @@ export default function Team() {
             <h3 className="text-xl font-semibold">Alex Audi</h3>
             <p className="text-leaf-600 font-medium mb-3">Software Engineering Intern</p>
             <p className="text-sm text-ink-900/70 leading-relaxed">
-              Joining the engineering team to contribute to front-end and data
+              Joined the engineering team to contribute to front-end and data
               integration pipelines for Nasken Health’s AI-powered journaling and
               remote patient monitoring platform.
             </p>

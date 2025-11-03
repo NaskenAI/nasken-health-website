@@ -50,9 +50,7 @@ const Media = () => {
   return (
     <section id="media" className="py-20 bg-ink-900 text-white">
       <div className="text-center mb-12">
-        <h2 className="text-4xl font-semibold text-white mb-4">
-          Blogs & News
-        </h2>
+        <h2 className="text-4xl font-semibold text-white mb-4">Blogs & News</h2>
         <p className="text-white/80 max-w-3xl mx-auto text-lg">
           Latest news highlighting research and innovations in digital health.
         </p>
@@ -66,23 +64,19 @@ const Media = () => {
             className="rounded-xl border border-white/10 p-6 shadow-sm hover:shadow-soft transition"
             style={{ background: "var(--card)" }}
           >
-            {/* header */}
             <div className="flex items-center gap-2 text-white/60 text-sm mb-2">
               <Calendar className="w-4 h-4 text-leaf-400" />
               <span>{item.date}</span>
             </div>
 
-            {/* title */}
             <h3 className="font-semibold text-lg mb-2 text-white">
               {item.headline}
             </h3>
 
-            {/* summary */}
             <p className="text-sm text-white/70 leading-relaxed mb-4">
               {item.summary}
             </p>
 
-            {/* button */}
             {item.link.startsWith("/") ? (
               <Link
                 to={item.link}

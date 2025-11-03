@@ -10,7 +10,7 @@ export default function Team() {
         <title>Our Team — Nasken Health</title>
         <meta
           name="description"
-          content="Meet the Nasken Health leadership team advancing trustworthy, privacy-preserving AI in healthcare, including Founder & CEO Sandesh GV and Head of Engineering Uriah Thornes."
+          content="Meet the Nasken Health leadership team advancing trustworthy, privacy-preserving AI in healthcare, including Founder & CEO Sandesh GV, Head of Engineering Uriah Thornes, and Software Engineer Alex Audi."
         />
         <link rel="canonical" href="https://www.naskenhealth.com/team" />
       </Helmet>
@@ -91,7 +91,7 @@ export default function Team() {
             </div>
           </div>
 
-          {/* Software Engineering Intern */}
+          {/* Software Engineer (AI/ML) */}
           <div className="text-center border border-slate-200 rounded-2xl p-8 hover:shadow-soft transition w-full max-w-sm">
             <img
               src="/images/team/alex-audi.jpg"
@@ -99,11 +99,12 @@ export default function Team() {
               className="w-32 h-32 mx-auto rounded-full mb-5 object-cover"
             />
             <h3 className="text-xl font-semibold">Alex Audi</h3>
-            <p className="text-leaf-600 font-medium mb-3">Software Engineering Intern</p>
+            <p className="text-leaf-600 font-medium mb-3">Software Engineer — AI/ML</p>
             <p className="text-sm text-ink-900/70 leading-relaxed">
-              Joined the engineering team to contribute to front-end and data
-              integration pipelines for Nasken Health’s AI-powered journaling and
-              remote patient monitoring platform.
+              Works on AI/ML components for journaling summarization and clinical
+              data modeling. Contributes to front-end integration and health data
+              pipelines supporting Nasken’s predictive analytics and responsible
+              AI framework.
             </p>
 
             <div className="flex items-center justify-center gap-4 mt-4">

@@ -1,4 +1,5 @@
 import { Calendar, ExternalLink } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Media = () => {
   const mediaItems = [
@@ -17,11 +18,11 @@ const Media = () => {
       link: "https://www.healthit.gov/topic/scientific-initiatives/pcor/patient-generated-health-data-pghd",
     },
     {
-      headline: "Technology and the future of mental health treatment",
-      date: "NIMH",
+      headline: "Nasken Health joins NVIDIA Inception Program",
+      date: "NVIDIA Inception (2025)",
       summary:
-        "NIMH guidance on mobile apps, telehealth, sensors, and the promise and limits of digital mental health.",
-      link: "https://www.nimh.nih.gov/health/topics/technology-and-the-future-of-mental-health-treatment",
+        "Nasken Health has been accepted into NVIDIA’s global startup program supporting AI innovators. This collaboration accelerates our mission to build trustworthy, privacy-preserving AI for healthcare.",
+      link: "/news/nvidia-inception",
     },
     {
       headline: "Conversational agents for mental health: scoping review",
@@ -82,16 +83,25 @@ const Media = () => {
             </p>
 
             {/* button */}
-            <a
-              href={item.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-lg px-4 py-2 font-medium text-gray-900 bg-white hover:bg-gray-100 transition shadow-sm text-sm"
-            >
-              <ExternalLink className="w-4 h-4 text-gray-700" />
-              Read More
-            </a>
-
+            {item.link.startsWith("/") ? (
+              <Link
+                to={item.link}
+                className="inline-flex items-center gap-2 rounded-lg px-4 py-2 font-medium text-gray-900 bg-white hover:bg-gray-100 transition shadow-sm text-sm"
+              >
+                <ExternalLink className="w-4 h-4 text-gray-700" />
+                Read More
+              </Link>
+            ) : (
+              <a
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-lg px-4 py-2 font-medium text-gray-900 bg-white hover:bg-gray-100 transition shadow-sm text-sm"
+              >
+                <ExternalLink className="w-4 h-4 text-gray-700" />
+                Read More
+              </a>
+            )}
           </div>
         ))}
       </div>

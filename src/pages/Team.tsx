@@ -73,7 +73,7 @@ export default function Team() {
               className="w-32 h-32 mx-auto rounded-full mb-5 object-cover"
             />
             <h3 className="text-xl font-semibold">Uriah Thornes</h3>
-            <p className="text-leaf-600 font-medium mb-3">Engineering</p>
+            <p className="text-leaf-600 font-medium mb-3"> Engineering </p>
             <p className="text-sm text-ink-900/70 leading-relaxed">
               Leads Nasken’s AI and software engineering teams across journaling
               summarization, clinical NLP, and multimodal health data pipelines.

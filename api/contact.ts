@@ -1,21 +1,45 @@
-import type { IncomingMessage, ServerResponse } from "http";
+export const config = {
+  runtime: "nodejs", // ensures Node APIs like process.env work normally
+};
 
-export default async function handler(req: VercelRequest, res: VercelResponse) {
-  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
+export default async function handler(request: Request): Promise<Response> {
+  if (request.method !== "POST") {
+    return new Response(JSON.stringify({ error: "Method not allowed" }), {
+      status: 405,
+      headers: { "Content-Type": "application/json" },
+    });
+  }
 
-  const { name, email, message, linkedin, resume_url } = req.body || {};
-  if (!name || !email || !message) return res.status(400).json({ error: "Missing fields" });
+  // Parse JSON body
+  const body = await request.json().catch(() => null);
 
-  // Simple spam honeypot: block if hidden field is filled
-  if ((req.body as any)._hp) return res.status(200).json({ ok: true });
+  const { name, email, message, linkedin, resume_url, _hp } = body || {};
 
-  // Send email via Resend (or your provider)
+  if (!name || !email || !message) {
+    return new Response(JSON.stringify({ error: "Missing fields" }), {
+      status: 400,
+      headers: { "Content-Type": "application/json" },
+    });
+  }
+
+  // Simple honeypot check
+  if (_hp) {
+    return new Response(JSON.stringify({ ok: true }), {
+      status: 200,
+      headers: { "Content-Type": "application/json" },
+    });
+  }
+
+  // Email provider setup
   const apiKey = process.env.RESEND_API_KEY!;
-  const to = process.env.CONTACT_TO!; // e.g. contact@nasken.ai
+  const to = process.env.CONTACT_TO!; // your inbox (contact@nasken.ai)
 
   const r = await fetch("https://api.resend.com/emails", {
     method: "POST",
-    headers: { "Content-Type": "application/json", Authorization: `Bearer ${apiKey}` },
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${apiKey}`,
+    },
     body: JSON.stringify({
       from: "Nasken Health <no-reply@nasken.ai>",
       to,
@@ -31,7 +55,15 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     }),
   });
 
-  if (!r.ok) return res.status(500).json({ error: "Email send failed" });
-  return res.status(200).json({ ok: true });
-}
+  if (!r.ok) {
+    return new Response(JSON.stringify({ error: "Email send failed" }), {
+      status: 500,
+      headers: { "Content-Type": "application/json" },
+    });
+  }
 
+  return new Response(JSON.stringify({ ok: true }), {
+    status: 200,
+    headers: { "Content-Type": "application/json" },
+  });
+}

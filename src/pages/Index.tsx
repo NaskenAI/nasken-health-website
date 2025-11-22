@@ -7,7 +7,6 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Newsletter from "@/components/NewsLetter";
 import Traction from "@/components/Traction";
-import ProductFlow from "@/components/ProductFlow";
 
 
 const Index = () => {
@@ -15,7 +14,6 @@ const Index = () => {
     <div className="min-h-screen">
       <Hero />
       <About />
-      <ProductFlow />
       <Research />
       <Media />
       <Traction />

@@ -127,6 +127,41 @@ export default function Team() {
             </div>
           </div>
 
+          <div className="text-center border border-slate-200 rounded-2xl p-8 hover:shadow-soft transition w-full max-w-sm">
+            <img
+              src="/images/team/yijia-xu.jpg"
+              alt="Yijia Xu"
+              className="w-32 h-32 mx-auto rounded-full mb-5 object-cover"
+            />
+            <h3 className="text-xl font-semibold">Yijia Xu</h3>
+            <p className="text-leaf-600 font-medium mb-3">Advisor — Research & Data</p>
+            <p className="text-sm text-ink-900/70 leading-relaxed">
+              Policy & data analyst specializing in quantitative research,
+              regression models, panel data methods, and large-scale dataset
+              analytics. Supports Nasken Health’s research design, statistical
+              validation, and academic collaborations.
+            </p>
+
+            <div className="flex items-center justify-center gap-4 mt-4">
+              <a
+                href="mailto:xuy13023@gmail.com"
+                className="text-ink-900 hover:text-leaf-600"
+                aria-label="Email Yijia"
+              >
+                <Mail className="w-5 h-5" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/yijia-xu-georgina"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-ink-900 hover:text-leaf-600"
+                aria-label="LinkedIn"
+              >
+                <LinkedinIcon className="w-5 h-5" />
+              </a>
+            </div>
+          </div>
+
           {/* Careers invitation */}
           <Link
             to="/careers"

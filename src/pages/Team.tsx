@@ -37,7 +37,7 @@ export default function Team() {
               className="w-32 h-32 mx-auto rounded-full mb-5 object-cover"
             />
             <h3 className="text-xl font-semibold">Sandesh GV</h3>
-            <p className="text-leaf-600 font-medium mb-3">Founder/Software Developer</p>
+            <p className="text-leaf-600 font-medium mb-3">Software Developer</p>
             <p className="text-sm text-ink-900/70 leading-relaxed">
               Engineering leader with 12+ years of experience in AI and software systems.
               Formerly at Meta and Oracle, building privacy-preserving clinical AI
@@ -91,41 +91,6 @@ export default function Team() {
             </div>
           </div>
 
-          {/* Software Engineer (AI/ML) */}
-          <div className="text-center border border-slate-200 rounded-2xl p-8 hover:shadow-soft transition w-full max-w-sm">
-            <img
-              src="/images/team/alex-audi.jpg"
-              alt="Alex Audi"
-              className="w-32 h-32 mx-auto rounded-full mb-5 object-cover"
-            />
-            <h3 className="text-xl font-semibold">Alex Audi</h3>
-            <p className="text-leaf-600 font-medium mb-3">Software Engineering Intern — AI/ML</p>
-            <p className="text-sm text-ink-900/70 leading-relaxed">
-              Works on AI/ML components for journaling summarization and clinical
-              data modeling. Contributes to front-end integration and health data
-              pipelines supporting Nasken’s predictive analytics and responsible
-              AI framework.
-            </p>
-
-            <div className="flex items-center justify-center gap-4 mt-4">
-              <a
-                href="mailto:alex@nasken.ai"
-                className="text-ink-900 hover:text-leaf-600"
-                aria-label="Email Alex"
-              >
-                <Mail className="w-5 h-5" />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/alex-audi/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-ink-900 hover:text-leaf-600"
-                aria-label="LinkedIn"
-              >
-                <LinkedinIcon className="w-5 h-5" />
-              </a>
-            </div>
-          </div>
 
           <div className="text-center border border-slate-200 rounded-2xl p-8 hover:shadow-soft transition w-full max-w-sm">
             <img

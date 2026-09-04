@@ -28,7 +28,7 @@ const Technology = () => {
         <h2 className="text-4xl font-semibold text-white mb-4">Technology</h2>
         <p className="text-white/80 text-lg max-w-3xl mx-auto">
           Our stack combines AI precision, privacy-preserving design, and
-          interoperability — built for clinicians and patients alike.
+          interoperability — built for small and rural clinics.
         </p>
       </div>
 

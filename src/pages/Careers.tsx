@@ -80,12 +80,19 @@ export default function Careers() {
               name="_hp"
               tabIndex={-1}
               autoComplete="off"
+              aria-hidden="true"
               style={{ display: "none" }}
             />
 
             <div>
-              <label className="block text-sm text-ink-900/70 mb-1">Full name *</label>
+              <label
+                htmlFor="careers-name"
+                className="block text-sm text-ink-900/70 mb-1"
+              >
+                Full name *
+              </label>
               <input
+                id="careers-name"
                 name="name"
                 required
                 className="w-full rounded-lg border border-slate-300 p-3 focus:outline-none focus:ring-2 focus:ring-leaf-400"
@@ -94,9 +101,15 @@ export default function Careers() {
             </div>
 
             <div>
-              <label className="block text-sm text-ink-900/70 mb-1">Email *</label>
+              <label
+                htmlFor="careers-email"
+                className="block text-sm text-ink-900/70 mb-1"
+              >
+                Email *
+              </label>
               <input
                 type="email"
+                id="careers-email"
                 name="email"
                 required
                 className="w-full rounded-lg border border-slate-300 p-3 focus:outline-none focus:ring-2 focus:ring-leaf-400"
@@ -105,10 +118,14 @@ export default function Careers() {
             </div>
 
             <div>
-              <label className="block text-sm text-ink-900/70 mb-1">
+              <label
+                htmlFor="careers-linkedin"
+                className="block text-sm text-ink-900/70 mb-1"
+              >
                 LinkedIn Profile *
               </label>
               <input
+                id="careers-linkedin"
                 name="linkedin"
                 required
                 className="w-full rounded-lg border border-slate-300 p-3 focus:outline-none focus:ring-2 focus:ring-leaf-400"
@@ -117,8 +134,14 @@ export default function Careers() {
             </div>
 
             <div>
-              <label className="block text-sm text-ink-900/70 mb-1">Notes</label>
+              <label
+                htmlFor="careers-message"
+                className="block text-sm text-ink-900/70 mb-1"
+              >
+                Notes
+              </label>
               <textarea
+                id="careers-message"
                 name="message"
                 rows={6}
                 className="w-full rounded-lg border border-slate-300 p-3 focus:outline-none focus:ring-2 focus:ring-leaf-400"

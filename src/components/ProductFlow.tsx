@@ -21,7 +21,9 @@ const ProductFlow = () => {
         {/* Right: Text */}
         <div className="order-1 lg:order-2 space-y-8">
           <div>
-            <h2 className="text-4xl font-semibold mb-4">How It Works</h2>
+            <h2 className="text-4xl font-semibold mb-4">
+              Our Earlier Work: How It Works
+            </h2>
             <p className="text-white/80 max-w-xl">
               Nasken Health connects patient journaling, therapist summaries, and
               clinician dashboards into one continuous, privacy-preserving workflow.

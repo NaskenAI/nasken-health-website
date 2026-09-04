@@ -74,12 +74,12 @@ const Research = () => {
     <section id="research" className="py-20 bg-ink-900 text-white">
       <div className="max-w-6xl mx-auto px-6 text-center">
         <h2 className="text-4xl font-semibold mb-4">
-          Why Journaling & Patient Data Matter
+          Evidence Behind Our Earlier Work
         </h2>
         <p className="text-white/80 max-w-2xl mx-auto mb-12 text-lg">
-          Structured journaling and patient-generated data improve self-awareness,
-          support emotion regulation, and give clinicians richer context between
-          sessions.
+          This is the research base for our earlier journaling work. Structured
+          journaling and patient-generated data improve self-awareness, support emotion
+          regulation, and give clinicians richer context between sessions.
         </p>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">

@@ -1,7 +1,13 @@
-import { Globe, Lock, Zap } from "lucide-react";
+import { Activity, Globe, Lock, Zap } from "lucide-react";
 
 const Technology = () => {
   const technologies = [
+    {
+      icon: <Activity className="w-8 h-8 text-emerald-400" />,
+      title: "Post-discharge risk identification",
+      description:
+        "Identifying which patients need attention in the weeks after discharge, when clinical visibility is thinnest.",
+    },
     {
       icon: <Globe className="w-8 h-8 text-emerald-400" />,
       title: "Interoperable Architecture",
@@ -28,11 +34,11 @@ const Technology = () => {
         <h2 className="text-4xl font-semibold text-white mb-4">Technology</h2>
         <p className="text-white/80 text-lg max-w-3xl mx-auto">
           Our stack combines AI precision, privacy-preserving design, and
-          interoperability — built for clinicians and patients alike.
+          interoperability — built for small and rural clinics.
         </p>
       </div>
 
-      <div className="grid md:grid-cols-3 gap-6">
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
         {technologies.map((tech, index) => (
           <div
             key={index}

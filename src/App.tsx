@@ -1,3 +1,4 @@
+import { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -6,13 +7,16 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Seo from "@/components/Seo";
 
 import Index from "./pages/Index";
-import NotFound from "./pages/NotFound";
-import Fellowships from "./pages/Fellowships";
-import Privacy from "./pages/Privacy";
-import Terms from "./pages/Terms";
-import Team from "./pages/Team";
-import Careers from "./pages/Careers";
-import NvidiaInception from "./pages/News-NvidiaInception";
+
+// Split the secondary routes out of the entry chunk; Index stays eager
+// because it is the landing page.
+const NotFound = lazy(() => import("./pages/NotFound"));
+const Fellowships = lazy(() => import("./pages/Fellowships"));
+const Privacy = lazy(() => import("./pages/Privacy"));
+const Terms = lazy(() => import("./pages/Terms"));
+const Team = lazy(() => import("./pages/Team"));
+const Careers = lazy(() => import("./pages/Careers"));
+const NvidiaInception = lazy(() => import("./pages/News-NvidiaInception"));
 
 const queryClient = new QueryClient();
 
@@ -22,6 +26,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <Router>
+        <Suspense fallback={null}>
         <Routes>
           <Route
             path="/"
@@ -128,6 +133,7 @@ const App = () => (
             }
           />
         </Routes>
+        </Suspense>
       </Router>
     </TooltipProvider>
   </QueryClientProvider>

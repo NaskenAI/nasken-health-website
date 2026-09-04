@@ -69,6 +69,10 @@ const About = () => {
           <img
             src={healthcareTeam}
             alt="Healthcare professionals using AI technology"
+            width={800}
+            height={800}
+            loading="lazy"
+            decoding="async"
             className="rounded-xl w-full border border-white/10 shadow-soft"
           />
           <div className="absolute inset-0 rounded-xl bg-leaf-500/10"></div>

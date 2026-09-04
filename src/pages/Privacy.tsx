@@ -82,7 +82,7 @@ const Privacy = () => {
         </p>
         <button
           type="button"
-          onClick={() => (window as any).revisitConsent?.()}
+          onClick={() => window.revisitConsent?.()}
           className="inline-flex items-center px-4 py-2 rounded-lg border border-slate-300 hover:bg-slate-50 text-slate-800"
         >
           Revisit consent

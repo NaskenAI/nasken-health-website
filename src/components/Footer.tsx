@@ -13,7 +13,9 @@ type FooterProps = {
 const Footer = ({ navVariant = "home" }: FooterProps) => {
   const handleScroll = (id: string) => {
     const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
+    if (!el) return;
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    el.scrollIntoView({ behavior: reduce ? "auto" : "smooth" });
   };
 
   return (

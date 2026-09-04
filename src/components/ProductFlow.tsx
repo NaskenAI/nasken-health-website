@@ -10,6 +10,10 @@ const ProductFlow = () => {
           <img
             src={productFlow}
             alt="Flow: journaling → therapist summary → clinician dashboard"
+            width={1536}
+            height={1024}
+            loading="lazy"
+            decoding="async"
             className="w-full rounded-2xl ring-1 ring-white/10 shadow-soft"
           />
         </div>

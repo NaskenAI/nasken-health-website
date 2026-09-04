@@ -15,3 +15,17 @@ html,body,#root{height:100%}
 .section{ @apply max-w-6xl mx-auto px-4; }
 .h1{ @apply text-4xl md:text-5xl font-bold tracking-tight; }  /* toned down */
 .h2{ @apply text-3xl md:text-4xl font-semibold tracking-tight; }
+
+/* Respect an explicit OS-level request for reduced motion. Covers the
+   Tailwind animate-* utilities and any transition, without removing
+   focus/visibility behaviour. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

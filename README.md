@@ -8,11 +8,6 @@ summarization, and clinical analytics.
 canonical domain. Every `<link rel="canonical">` on the site points at
 `https://www.naskenhealth.com`.
 
-> **This repo is edited through git.** It was originally scaffolded by Lovable,
-> but Lovable no longer syncs to it and all of its tooling has been removed.
-> Nothing here is overwritten by an external tool — git is the only source of
-> truth, and CI is the only thing that catches a broken push.
-
 ## Stack
 
 |            |                                                                |

@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import Footer from "@/components/Footer-2";
+import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
 
 export default function Careers() {

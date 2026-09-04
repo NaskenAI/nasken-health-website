@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { LinkedinIcon, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
-import Footer from "@/components/Footer-2";
+import Footer from "@/components/Footer";
 
 export default function Team() {
   return (

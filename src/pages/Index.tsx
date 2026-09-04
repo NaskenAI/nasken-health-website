@@ -20,7 +20,7 @@ const Index = () => {
       <Technology />
       <Contact />
       <Newsletter /> 
-      <Footer />
+      <Footer navVariant="scroll" />
     </div>
   );
 };

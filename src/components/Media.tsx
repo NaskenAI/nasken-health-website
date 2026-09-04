@@ -2,7 +2,7 @@ import { Calendar, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Media = () => {
-  const mediaItems = [
+  const earlierWorkItems = [
     {
       headline: "How journaling supports mental health",
       date: "University of Rochester Medical Center",
@@ -47,54 +47,122 @@ const Media = () => {
     },
   ];
 
+  const currentWorkItems = [
+    {
+      headline: "HL7 FHIR and federal interoperability",
+      date: "ASTP/ONC",
+      summary:
+        "Federal overview of the FHIR standard, its role under the 21st Century Cures Act, and why it underpins health data exchange.",
+      link: "https://healthit.gov/interoperability/investments/fhir/",
+    },
+    {
+      headline: "Remote biometric sensing after discharge",
+      date: "Journal of Hospital Medicine (2026)",
+      summary:
+        "Systematic review and meta-analysis of 39 studies examining readmission and mortality outcomes for patients monitored after leaving hospital.",
+      link: "https://shmpublications.onlinelibrary.wiley.com/doi/10.1002/jhm.70224",
+    },
+    {
+      headline: "Predicting readmission from post-discharge activity",
+      date: "Scientific Reports (2023)",
+      summary:
+        "Randomised trial testing whether remotely monitored activity patterns improve 30-day readmission prediction over models built from discharge data alone.",
+      link: "https://www.nature.com/articles/s41598-023-35201-9",
+    },
+    {
+      headline: "Which RPM components actually work",
+      date: "European Journal of Heart Failure (2025)",
+      summary:
+        "Meta-analysis comparing remote monitoring programme components against hospitalisation and mortality outcomes in heart failure.",
+      link: "https://onlinelibrary.wiley.com/doi/full/10.1002/ejhf.3568",
+    },
+    {
+      headline: "Telemonitoring high-risk patients after discharge",
+      date: "JMIR (2024)",
+      summary:
+        "Prospective cohort study of home telemonitoring and follow-up for high-risk patients, measuring readmissions and emergency visits.",
+      link: "https://pmc.ncbi.nlm.nih.gov/articles/PMC11437225/",
+    },
+    {
+      headline: "Where remote monitoring did not help",
+      date: "Randomised trial (2026)",
+      summary:
+        "Trial across 19 hospitals in which some remote-response strategies produced fewer days at home than usual care for older post-discharge patients.",
+      link: "https://pubmed.ncbi.nlm.nih.gov/42275060/",
+    },
+  ];
+
+  const groups = [
+    {
+      label: "Current work — post-discharge monitoring and interoperability",
+      items: currentWorkItems,
+    },
+    {
+      label: "Earlier work — journaling and patient-generated data",
+      items: earlierWorkItems,
+    },
+  ];
+
   return (
     <section id="media" className="py-20 bg-ink-900 text-white">
       <div className="text-center mb-12">
         <h2 className="text-4xl font-semibold text-white mb-4">Blogs & News</h2>
         <p className="text-white/80 max-w-3xl mx-auto text-lg">
-          Latest news highlighting research and innovations in digital health.
+          Research and federal guidance relevant to our current and earlier work.
         </p>
       </div>
 
       {/* grid */}
-      <div className="section grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-        {mediaItems.map((item, index) => (
-          <div
-            key={index}
-            className="rounded-xl border border-white/10 p-6 shadow-sm hover:shadow-soft transition"
-            style={{ background: "var(--card)" }}
-          >
-            <div className="flex items-center gap-2 text-white/60 text-sm mb-2">
-              <Calendar className="w-4 h-4 text-leaf-400" />
-              <span>{item.date}</span>
-            </div>
+      {groups.map((group) => (
+        <div key={group.label} className="section mb-12 last:mb-0">
+          <h3 className="text-xs uppercase tracking-widest text-white/60 mb-6">
+            {group.label}
+          </h3>
 
-            <h3 className="font-semibold text-lg mb-2 text-white">{item.headline}</h3>
-
-            <p className="text-sm text-white/70 leading-relaxed mb-4">{item.summary}</p>
-
-            {item.link.startsWith("/") ? (
-              <Link
-                to={item.link}
-                className="inline-flex items-center gap-2 rounded-lg px-4 py-2 font-medium text-gray-900 bg-white hover:bg-gray-100 transition shadow-sm text-sm"
+          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {group.items.map((item, index) => (
+              <div
+                key={index}
+                className="rounded-xl border border-white/10 p-6 shadow-sm hover:shadow-soft transition"
+                style={{ background: "var(--card)" }}
               >
-                <ExternalLink className="w-4 h-4 text-gray-700" />
-                Read More
-              </Link>
-            ) : (
-              <a
-                href={item.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-lg px-4 py-2 font-medium text-gray-900 bg-white hover:bg-gray-100 transition shadow-sm text-sm"
-              >
-                <ExternalLink className="w-4 h-4 text-gray-700" />
-                Read More
-              </a>
-            )}
+                <div className="flex items-center gap-2 text-white/60 text-sm mb-2">
+                  <Calendar className="w-4 h-4 text-leaf-400" />
+                  <span>{item.date}</span>
+                </div>
+
+                <h4 className="font-semibold text-lg mb-2 text-white">
+                  {item.headline}
+                </h4>
+
+                <p className="text-sm text-white/70 leading-relaxed mb-4">
+                  {item.summary}
+                </p>
+
+                {item.link.startsWith("/") ? (
+                  <Link
+                    to={item.link}
+                    className="inline-flex items-center gap-2 rounded-lg px-4 py-2 font-medium text-gray-900 bg-white hover:bg-gray-100 transition shadow-sm text-sm"
+                  >
+                    <ExternalLink className="w-4 h-4 text-gray-700" />
+                    Read More
+                  </Link>
+                ) : (
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-lg px-4 py-2 font-medium text-gray-900 bg-white hover:bg-gray-100 transition shadow-sm text-sm"
+                  >
+                    <ExternalLink className="w-4 h-4 text-gray-700" />
+                    Read More
+                  </a>
+                )}
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
     </section>
   );
 };

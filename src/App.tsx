@@ -33,7 +33,7 @@ export const AppRoutes = () => (
               <>
                 <Seo
                   title="Nasken Health — AI-Powered Clinical Insights"
-                  description="Nasken Health is a Boston-based digital health startup building AI tools for remote patient monitoring, therapy summarization, and clinical analytics."
+                  description="Nasken Health builds AI-assisted remote patient monitoring, post-discharge risk identification, and health data interoperability for small and rural clinics."
                   path="/"
                 />
                 <Index />

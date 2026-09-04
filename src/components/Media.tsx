@@ -69,13 +69,9 @@ const Media = () => {
               <span>{item.date}</span>
             </div>
 
-            <h3 className="font-semibold text-lg mb-2 text-white">
-              {item.headline}
-            </h3>
+            <h3 className="font-semibold text-lg mb-2 text-white">{item.headline}</h3>
 
-            <p className="text-sm text-white/70 leading-relaxed mb-4">
-              {item.summary}
-            </p>
+            <p className="text-sm text-white/70 leading-relaxed mb-4">{item.summary}</p>
 
             {item.link.startsWith("/") ? (
               <Link

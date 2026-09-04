@@ -23,8 +23,8 @@ const ProductFlow = () => {
           <div>
             <h2 className="text-4xl font-semibold mb-4">How It Works</h2>
             <p className="text-white/80 max-w-xl">
-              Nasken Health connects patient journaling, therapist summaries, and clinician dashboards 
-              into one continuous, privacy-preserving workflow.
+              Nasken Health connects patient journaling, therapist summaries, and
+              clinician dashboards into one continuous, privacy-preserving workflow.
             </p>
           </div>
 
@@ -60,9 +60,10 @@ const ProductFlow = () => {
           {/* Workflow Summary */}
           <div className="pt-4 border-t border-white/10">
             <p className="text-white/75 text-sm leading-relaxed max-w-lg">
-              The workflow transforms patient-generated journaling into structured, actionable insights 
-              across three stages: capture, summarize, and visualize. Every stage 
-              enhances engagement, risk detection, and care personalization.
+              The workflow transforms patient-generated journaling into structured,
+              actionable insights across three stages: capture, summarize, and
+              visualize. Every stage enhances engagement, risk detection, and care
+              personalization.
             </p>
           </div>
         </div>

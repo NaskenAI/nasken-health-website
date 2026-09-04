@@ -3,15 +3,14 @@ import Footer from "@/components/Footer";
 export default function NvidiaInception() {
   return (
     <main className="bg-white text-ink-900">
-
       {/* Header */}
       <section className="section py-16 text-center">
         <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-3">
           Nasken Health Joins NVIDIA Inception Program
         </h1>
         <p className="text-ink-900/70 max-w-2xl mx-auto">
-          Empowering innovation in responsible AI for healthcare with support
-          from NVIDIA.
+          Empowering innovation in responsible AI for healthcare with support from
+          NVIDIA.
         </p>
       </section>
 
@@ -28,32 +27,31 @@ export default function NvidiaInception() {
           >
             NVIDIA Inception Program
           </a>
-          , a global initiative designed to support startups revolutionizing
-          industries with AI and data science.
+          , a global initiative designed to support startups revolutionizing industries
+          with AI and data science.
         </p>
 
         <p className="mb-4">
-          The program provides access to <strong>NVIDIA’s cutting-edge
-          resources</strong>, including technical guidance, infrastructure
-          credits, and go-to-market support, helping Nasken accelerate the
-          development of privacy-preserving, intelligent health systems.
+          The program provides access to{" "}
+          <strong>NVIDIA’s cutting-edge resources</strong>, including technical
+          guidance, infrastructure credits, and go-to-market support, helping Nasken
+          accelerate the development of privacy-preserving, intelligent health systems.
         </p>
 
         <p className="mb-4">
           <em>
-            “Joining NVIDIA Inception reinforces our commitment to scaling
-            responsible AI in healthcare,”
+            “Joining NVIDIA Inception reinforces our commitment to scaling responsible
+            AI in healthcare,”
           </em>{" "}
           said <strong>Sandesh GV</strong>, Founder & CEO of Nasken Health. “With
-          NVIDIA’s support, we can advance AI systems that improve patient
-          outcomes while maintaining trust, privacy, and clinical integrity.”
+          NVIDIA’s support, we can advance AI systems that improve patient outcomes
+          while maintaining trust, privacy, and clinical integrity.”
         </p>
 
         <p className="mb-4">
-          Nasken Health develops AI-powered digital health platforms that
-          integrate journaling, clinical NLP, and predictive analytics to help
-          patients and providers monitor well-being through connected,
-          privacy-first data insights.
+          Nasken Health develops AI-powered digital health platforms that integrate
+          journaling, clinical NLP, and predictive analytics to help patients and
+          providers monitor well-being through connected, privacy-first data insights.
         </p>
 
         <p>

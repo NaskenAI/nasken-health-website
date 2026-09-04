@@ -24,15 +24,14 @@ function InitialsAvatar({ name }: { name: string }) {
 export default function Team() {
   return (
     <main className="bg-white text-ink-900">
-
       {/* Header */}
       <section className="section py-16 text-center">
         <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-3">
           Our Team
         </h1>
         <p className="text-ink-900/70 max-w-2xl mx-auto">
-          Nasken Health is led by engineers and researchers advancing
-          trustworthy, privacy-preserving AI in healthcare.
+          Nasken Health is led by engineers and researchers advancing trustworthy,
+          privacy-preserving AI in healthcare.
         </p>
       </section>
 
@@ -45,9 +44,9 @@ export default function Team() {
             <h3 className="text-xl font-semibold">Sandesh GV</h3>
             <p className="text-leaf-600 font-medium mb-3">Founder &amp; CEO</p>
             <p className="text-sm text-ink-900/70 leading-relaxed">
-              Engineering leader with 12+ years of experience in AI and software systems.
-              Formerly at Meta and Oracle, building privacy-preserving clinical AI
-              and digital health platforms integrating patient-generated data and
+              Engineering leader with 12+ years of experience in AI and software
+              systems. Formerly at Meta and Oracle, building privacy-preserving clinical
+              AI and digital health platforms integrating patient-generated data and
               predictive analytics.
             </p>
 
@@ -78,8 +77,8 @@ export default function Team() {
             <p className="text-leaf-600 font-medium mb-3">Engineering</p>
             <p className="text-sm text-ink-900/70 leading-relaxed">
               Leads Nasken’s AI and software engineering teams across journaling
-              summarization, clinical NLP, and multimodal health data pipelines.
-              Focused on building scalable, responsible AI frameworks in healthcare.
+              summarization, clinical NLP, and multimodal health data pipelines. Focused
+              on building scalable, responsible AI frameworks in healthcare.
             </p>
 
             <div className="flex items-center justify-center gap-4 mt-4">
@@ -93,16 +92,15 @@ export default function Team() {
             </div>
           </div>
 
-
           <div className="text-center border border-slate-200 rounded-2xl p-8 hover:shadow-soft transition w-full max-w-sm">
             <InitialsAvatar name="Yijia Xu" />
             <h3 className="text-xl font-semibold">Yijia Xu</h3>
             <p className="text-leaf-600 font-medium mb-3">Advisor — Research & Data</p>
             <p className="text-sm text-ink-900/70 leading-relaxed">
-              Policy & data analyst specializing in quantitative research,
-              regression models, panel data methods, and large-scale dataset
-              analytics. Supports Nasken Health’s research design, statistical
-              validation, and academic collaborations.
+              Policy & data analyst specializing in quantitative research, regression
+              models, panel data methods, and large-scale dataset analytics. Supports
+              Nasken Health’s research design, statistical validation, and academic
+              collaborations.
             </p>
 
             <div className="flex items-center justify-center gap-4 mt-4">
@@ -126,7 +124,9 @@ export default function Team() {
             <div className="w-32 h-32 mb-5 rounded-full bg-slate-50 flex items-center justify-center">
               <span className="text-ink-900/40 font-semibold text-lg">Join Us</span>
             </div>
-            <h3 className="text-lg font-medium mb-2">Interested in joining our mission?</h3>
+            <h3 className="text-lg font-medium mb-2">
+              Interested in joining our mission?
+            </h3>
             <p className="text-sm">
               No current openings — you can still{" "}
               <span className="text-leaf-600 underline hover:text-leaf-700">

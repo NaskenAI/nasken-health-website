@@ -3,9 +3,7 @@ import { useState } from "react";
 import { Mail } from "lucide-react";
 
 const Newsletter = () => {
-  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">(
-    "idle"
-  );
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -36,7 +34,8 @@ const Newsletter = () => {
         <Mail className="w-10 h-10 mx-auto mb-4 text-leaf-400" />
         <h2 className="text-3xl font-semibold mb-3">Subscribe to our Newsletter</h2>
         <p className="text-white/80 mb-8">
-          Stay updated on Nasken Health’s research, product releases, and digital health insights.
+          Stay updated on Nasken Health’s research, product releases, and digital health
+          insights.
         </p>
 
         <form
@@ -55,7 +54,11 @@ const Newsletter = () => {
             disabled={status === "sending" || status === "sent"}
             className="rounded-lg bg-white text-ink-900 px-6 py-3 font-medium hover:bg-gray-100 transition disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            {status === "sending" ? "Subscribing…" : status === "sent" ? "Subscribed" : "Subscribe"}
+            {status === "sending"
+              ? "Subscribing…"
+              : status === "sent"
+                ? "Subscribed"
+                : "Subscribe"}
           </button>
         </form>
 
@@ -70,7 +73,8 @@ const Newsletter = () => {
         )}
 
         <p className="text-xs text-white/50 mt-4">
-          By subscribing, you agree to receive occasional updates. You can unsubscribe anytime.
+          By subscribing, you agree to receive occasional updates. You can unsubscribe
+          anytime.
         </p>
       </div>
     </section>

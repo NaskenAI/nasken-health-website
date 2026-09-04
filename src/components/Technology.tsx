@@ -31,11 +31,10 @@ const Technology = () => {
   return (
     <section id="technology" className="py-20 bg-ink-900 text-white">
       <div className="text-center mb-12">
-        <h2 className="text-4xl font-semibold text-white mb-4">
-          Technology
-        </h2>
+        <h2 className="text-4xl font-semibold text-white mb-4">Technology</h2>
         <p className="text-white/80 text-lg max-w-3xl mx-auto">
-          Our stack combines AI precision, privacy-preserving design, and interoperability — built for clinicians and patients alike.
+          Our stack combines AI precision, privacy-preserving design, and
+          interoperability — built for clinicians and patients alike.
         </p>
       </div>
 
@@ -53,11 +52,10 @@ const Technology = () => {
       </div>
 
       <div className="mt-16 rounded-2xl p-10 text-center border border-white/10 bg-gradient-to-r from-emerald-900/40 to-emerald-700/30">
-        <h3 className="text-2xl font-semibold text-white mb-4">
-          Built for Healthcare
-        </h3>
+        <h3 className="text-2xl font-semibold text-white mb-4">Built for Healthcare</h3>
         <p className="text-white/80 text-lg max-w-2xl mx-auto">
-          Every layer of our system is designed for compliance, workflow alignment, and patient safety.
+          Every layer of our system is designed for compliance, workflow alignment, and
+          patient safety.
         </p>
       </div>
     </section>

@@ -15,18 +15,18 @@ canonical domain. Every `<link rel="canonical">` on the site points at
 
 ## Stack
 
-| | |
-|---|---|
-| Build | Vite 7 |
-| Language | TypeScript 5.9, `strict` enabled |
-| UI | React 18, Tailwind CSS 3.4 |
-| Routing | react-router-dom 7 (`BrowserRouter`) |
-| Head tags | react-helmet-async 3 |
-| Components | shadcn-ui on Radix primitives |
-| Icons | lucide-react |
-| Lint | ESLint 9 flat config, typescript-eslint, react-hooks, jsx-a11y |
-| Format | Prettier 3 |
-| Hosting | Vercel, with one serverless function under `api/` |
+|            |                                                                |
+| ---------- | -------------------------------------------------------------- |
+| Build      | Vite 7                                                         |
+| Language   | TypeScript 5.9, `strict` enabled                               |
+| UI         | React 18, Tailwind CSS 3.4                                     |
+| Routing    | react-router-dom 7 (`BrowserRouter`)                           |
+| Head tags  | react-helmet-async 3                                           |
+| Components | shadcn-ui on Radix primitives                                  |
+| Icons      | lucide-react                                                   |
+| Lint       | ESLint 9 flat config, typescript-eslint, react-hooks, jsx-a11y |
+| Format     | Prettier 3                                                     |
+| Hosting    | Vercel, with one serverless function under `api/`              |
 
 ## Running locally
 
@@ -40,14 +40,14 @@ npm run dev        # http://localhost:8080
 
 ## Scripts
 
-| Script | What it does |
-|---|---|
-| `npm run dev` | Vite dev server on port 8080 |
-| `npm run build` | Production build to `dist/` |
-| `npm run preview` | Serve the built output |
-| `npm run typecheck` | `tsc -b --noEmit` |
-| `npm run lint` | ESLint over the repo |
-| `npm run format` | Rewrite files with Prettier |
+| Script                 | What it does                    |
+| ---------------------- | ------------------------------- |
+| `npm run dev`          | Vite dev server on port 8080    |
+| `npm run build`        | Production build to `dist/`     |
+| `npm run preview`      | Serve the built output          |
+| `npm run typecheck`    | `tsc -b --noEmit`               |
+| `npm run lint`         | ESLint over the repo            |
+| `npm run format`       | Rewrite files with Prettier     |
 | `npm run format:check` | Fail if anything is unformatted |
 
 ## Environment variables
@@ -55,10 +55,10 @@ npm run dev        # http://localhost:8080
 Copy `.env.example` to `.env.local` for local work. In production these are set
 in the Vercel project settings. `.env.local` is gitignored; never commit a key.
 
-| Variable | Used by | Purpose |
-|---|---|---|
+| Variable         | Used by          | Purpose                                      |
+| ---------------- | ---------------- | -------------------------------------------- |
 | `RESEND_API_KEY` | `api/contact.ts` | Resend API key used to send form submissions |
-| `CONTACT_TO` | `api/contact.ts` | Inbox that receives submissions |
+| `CONTACT_TO`     | `api/contact.ts` | Inbox that receives submissions              |
 
 The `from` address in `api/contact.ts` is `no-reply@nasken.ai`, so **nasken.ai
 must be a verified sending domain in Resend** or every send is rejected. With
@@ -67,15 +67,15 @@ state, which points the user at `contact@nasken.ai`.
 
 ## Routes
 
-| Route | Page |
-|---|---|
-| `/` | Home |
-| `/team` | Team |
-| `/careers` | Careers |
-| `/fellowships` | Fellowship programme |
+| Route                    | Page                          |
+| ------------------------ | ----------------------------- |
+| `/`                      | Home                          |
+| `/team`                  | Team                          |
+| `/careers`               | Careers                       |
+| `/fellowships`           | Fellowship programme          |
 | `/news/nvidia-inception` | NVIDIA Inception announcement |
-| `/privacy` | Privacy Policy |
-| `/terms` | Terms of Service |
+| `/privacy`               | Privacy Policy                |
+| `/terms`                 | Terms of Service              |
 
 `/contact` permanently redirects to `/careers`. Anything else renders the
 404 page, which is `noindex`.

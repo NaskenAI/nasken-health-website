@@ -6,14 +6,12 @@ const Contact = () => {
     {
       icon: <Users className="w-6 h-6 text-leaf-400" />,
       title: "Partnerships",
-      description:
-        "Clinical collaborations and research partnerships",
+      description: "Clinical collaborations and research partnerships",
     },
     {
       icon: <FileText className="w-6 h-6 text-leaf-400" />,
       title: "Research Collaboration",
-      description:
-        "Academic partnerships and joint research initiatives",
+      description: "Academic partnerships and joint research initiatives",
     },
     {
       icon: <Mail className="w-6 h-6 text-leaf-400" />,
@@ -30,8 +28,8 @@ const Contact = () => {
           Contact & Partnerships
         </h2>
         <p className="text-lg text-white/80 max-w-3xl mx-auto">
-          We welcome conversations that advance digital health innovation.  
-          Reach out to explore collaboration or partnership opportunities.
+          We welcome conversations that advance digital health innovation. Reach out to
+          explore collaboration or partnership opportunities.
         </p>
       </div>
 

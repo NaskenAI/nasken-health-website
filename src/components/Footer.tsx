@@ -56,10 +56,16 @@ const Footer = ({ navVariant = "home" }: FooterProps) => {
             <nav className="flex flex-col space-y-2 text-white/80">
               {navVariant === "scroll" ? (
                 <>
-                  <button onClick={() => handleScroll("about")} className="text-left hover:text-white">
+                  <button
+                    onClick={() => handleScroll("about")}
+                    className="text-left hover:text-white"
+                  >
                     About
                   </button>
-                  <button onClick={() => handleScroll("technology")} className="text-left hover:text-white">
+                  <button
+                    onClick={() => handleScroll("technology")}
+                    className="text-left hover:text-white"
+                  >
                     Technology
                   </button>
                 </>
@@ -121,7 +127,10 @@ const Footer = ({ navVariant = "home" }: FooterProps) => {
         <div className="text-center text-white/70 text-sm">
           <p>© {new Date().getFullYear()} Nasken Inc. All rights reserved.</p>
           <p className="mt-2">
-            <Link to="/privacy" className="hover:text-white underline underline-offset-4">
+            <Link
+              to="/privacy"
+              className="hover:text-white underline underline-offset-4"
+            >
               Privacy Policy
             </Link>{" "}
             ·{" "}
@@ -130,7 +139,6 @@ const Footer = ({ navVariant = "home" }: FooterProps) => {
             </Link>
           </p>
         </div>
-
       </div>
     </footer>
   );

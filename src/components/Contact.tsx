@@ -1,5 +1,4 @@
 import { Mail, Users, FileText } from "lucide-react";
-import { Link } from "react-router-dom";
 
 const Contact = () => {
   const contactTypes = [
@@ -31,6 +30,15 @@ const Contact = () => {
           We welcome conversations that advance digital health innovation. Reach out to
           explore collaboration or partnership opportunities.
         </p>
+        <p className="mt-6 flex items-center justify-center gap-2 text-white/80">
+          <Mail className="w-4 h-4 text-leaf-400" />
+          <a
+            href="mailto:contact@nasken.ai"
+            className="hover:text-leaf-300 underline underline-offset-4"
+          >
+            contact@nasken.ai
+          </a>
+        </p>
       </div>
 
       <div className="section grid md:grid-cols-3 gap-8 mb-12">
@@ -43,12 +51,12 @@ const Contact = () => {
             <div className="flex justify-center mb-4">{contact.icon}</div>
             <h3 className="font-semibold text-lg mb-2">{contact.title}</h3>
             <p className="text-sm text-white/70 mb-6">{contact.description}</p>
-            <Link
-              to="/careers"
+            <a
+              href="mailto:contact@nasken.ai"
               className="inline-flex items-center justify-center rounded-lg px-5 py-3 font-medium text-gray-900 bg-white hover:bg-gray-100 transition shadow-sm"
             >
               Contact Us
-            </Link>
+            </a>
           </div>
         ))}
       </div>

@@ -18,7 +18,7 @@ const Technology = () => {
       icon: <Lock className="w-8 h-8 text-emerald-400" />,
       title: "Privacy-First Infrastructure",
       description:
-        "End-to-end encrypted data handling with access control and audit logging ensures HIPAA alignment and patient trust from data ingestion to inference.",
+        "Privacy and consent are design constraints for the platform rather than features bolted on later.",
     },
     {
       icon: <Zap className="w-8 h-8 text-emerald-400" />,
@@ -57,7 +57,7 @@ const Technology = () => {
           Built for Healthcare
         </h3>
         <p className="text-white/80 text-lg max-w-2xl mx-auto">
-          Every layer of our system is designed for compliance, workflow alignment, patient safety, and measurable outcomes.
+          Every layer of our system is designed for compliance, workflow alignment, and patient safety.
         </p>
       </div>
     </section>

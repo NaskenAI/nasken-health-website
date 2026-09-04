@@ -57,8 +57,7 @@ const ProductFlow = () => {
           <div className="pt-4 border-t border-white/10">
             <p className="text-white/75 text-sm leading-relaxed max-w-lg">
               The workflow transforms patient-generated journaling into structured, actionable insights 
-              across three stages: capture, summarize, and visualize. Data flows securely from the patient 
-              to the therapist and clinician dashboards—fully encrypted and HIPAA-aligned. Every stage 
+              across three stages: capture, summarize, and visualize. Every stage 
               enhances engagement, risk detection, and care personalization.
             </p>
           </div>

@@ -48,7 +48,7 @@ const About = () => {
               {
                 Icon: Shield,
                 title: "Privacy-First",
-                text: "HIPAA-compliant and secure by design",
+                text: "Privacy and consent as design constraints",
               },
             ].map(({ Icon, title, text }) => (
               <div

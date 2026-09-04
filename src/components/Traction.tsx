@@ -4,7 +4,6 @@ const Traction = () => {
     { value: "150+", label: "Beta journaling sessions analyzed" },
     { value: "5", label: "Partner clinicians participating in pilot" },
     { value: "3", label: "Active research collaborations in progress" },
-    { value: "90%", label: "Positive feedback from early pilot users" },
   ];
 
   return (

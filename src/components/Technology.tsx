@@ -1,13 +1,7 @@
-import { Cpu, Globe, Lock, Zap } from "lucide-react";
+import { Globe, Lock, Zap } from "lucide-react";
 
 const Technology = () => {
   const technologies = [
-    {
-      icon: <Cpu className="w-8 h-8 text-emerald-400" />,
-      title: "Clinical Language Intelligence",
-      description:
-        "Domain-adapted language models trained on de-identified medical text to transform unstructured narratives into structured, clinically relevant insights.",
-    },
     {
       icon: <Globe className="w-8 h-8 text-emerald-400" />,
       title: "Interoperable Architecture",
@@ -38,7 +32,7 @@ const Technology = () => {
         </p>
       </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid md:grid-cols-3 gap-6">
         {technologies.map((tech, index) => (
           <div
             key={index}

@@ -3,7 +3,7 @@
   "redirects": [
     {
       "source": "/contact",
-      "destination": "/careers",
+      "destination": "/",
       "permanent": true
     }
   ],

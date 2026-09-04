@@ -84,10 +84,6 @@ const Terms = () => {
           Use of this website is also subject to our{" "}
           <a href="/privacy" className="text-sky-700 underline">
             Privacy Policy
-          </a>{" "}
-          and{" "}
-          <a href="/cookies" className="text-sky-700 underline">
-            Cookie Policy
           </a>
           . Users can revisit consent settings below.
         </p>

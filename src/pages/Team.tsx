@@ -45,9 +45,8 @@ export default function Team() {
             <p className="text-leaf-600 font-medium mb-3">Founder &amp; CEO</p>
             <p className="text-sm text-ink-900/70 leading-relaxed">
               Engineering leader with 12+ years of experience in AI and software
-              systems. Formerly at Meta and Oracle, building privacy-preserving clinical
-              AI and digital health platforms integrating patient-generated data and
-              predictive analytics.
+              systems. Formerly at Meta and Oracle, building clinical AI and digital
+              health platforms integrating patient-generated data.
             </p>
 
             <div className="flex items-center justify-center gap-4 mt-4">

@@ -43,9 +43,12 @@ const Hero = () => {
         >
           Technology
         </button>
-        <Link to="/careers" className="text-white/80 hover:text-leaf-400">
+        <button
+          onClick={() => scrollTo("contact")}
+          className="text-white/80 hover:text-leaf-400"
+        >
           Contact
-        </Link>
+        </button>
         <Link to="/fellowships" className="text-white/80 hover:text-leaf-400">
           Nasken AI Health Fellowships
         </Link>

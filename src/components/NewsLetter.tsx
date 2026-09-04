@@ -45,6 +45,7 @@ const Newsletter = () => {
           <input
             type="email"
             name="email"
+            aria-label="Email address"
             required
             placeholder="Enter your email"
             className="w-full sm:w-2/3 rounded-lg border border-white/20 bg-white/10 p-3 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-leaf-400"

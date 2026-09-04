@@ -50,8 +50,8 @@ export default function NvidiaInception() {
 
         <p className="mb-4">
           Nasken Health develops AI-powered digital health platforms that integrate
-          journaling, clinical NLP, and predictive analytics to help patients and
-          providers monitor well-being through connected, privacy-first data insights.
+          journaling and clinical NLP to help patients and providers monitor well-being
+          through connected, privacy-first data insights.
         </p>
 
         <p>

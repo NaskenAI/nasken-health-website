@@ -25,7 +25,10 @@ const Hero = () => {
 
       {/* Top-right nav */}
       <nav className="absolute top-6 right-6 z-20 flex flex-wrap items-center gap-6 text-sm">
-        <button onClick={() => scrollTo("about")} className="text-white/80 hover:text-leaf-400">
+        <button
+          onClick={() => scrollTo("about")}
+          className="text-white/80 hover:text-leaf-400"
+        >
           About
         </button>
         <Link to="/team" className="text-white/80 hover:text-leaf-400">
@@ -34,10 +37,13 @@ const Hero = () => {
         <Link to="/careers" className="text-white/80 hover:text-leaf-400">
           Careers
         </Link>
-        <button onClick={() => scrollTo("technology")} className="text-white/80 hover:text-leaf-400">
+        <button
+          onClick={() => scrollTo("technology")}
+          className="text-white/80 hover:text-leaf-400"
+        >
           Technology
         </button>
-        <Link to="/contact" className="text-white/80 hover:text-leaf-400">
+        <Link to="/careers" className="text-white/80 hover:text-leaf-400">
           Contact
         </Link>
         <Link to="/fellowships" className="text-white/80 hover:text-leaf-400">
@@ -54,7 +60,7 @@ const Hero = () => {
 
         <div className="flex items-center justify-center gap-3">
           <Link
-            to="/contact"
+            to="/careers"
             className="rounded-lg px-5 py-3 font-medium text-white shadow-soft"
             style={{ background: "var(--btn)" }}
           >

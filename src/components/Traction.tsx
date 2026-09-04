@@ -4,7 +4,6 @@ const Traction = () => {
     { value: "150+", label: "Beta journaling sessions analyzed" },
     { value: "5", label: "Partner clinicians participating in pilot" },
     { value: "3", label: "Active research collaborations in progress" },
-    { value: "90%", label: "Positive feedback from early pilot users" },
   ];
 
   return (
@@ -15,8 +14,8 @@ const Traction = () => {
         </h2>
         <p className="text-white/80 max-w-3xl mx-auto mb-12 text-lg">
           Nasken Health is currently in early pilot deployment, validating its
-          journaling and AI-assisted insight platform with clinicians and
-          behavioral health researchers.
+          journaling and AI-assisted insight platform with clinicians and behavioral
+          health researchers.
         </p>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
@@ -36,9 +35,9 @@ const Traction = () => {
         </div>
 
         <div className="mt-12 max-w-3xl mx-auto text-white/70 text-base leading-relaxed">
-          Our pilot focuses on journaling engagement, clinician workload reduction,
-          and clinical insight accuracy — foundational metrics for next-stage
-          AI-driven health platforms.
+          Our pilot focuses on journaling engagement, clinician workload reduction, and
+          clinical insight accuracy — foundational metrics for next-stage AI-driven
+          health platforms.
         </div>
       </div>
     </section>

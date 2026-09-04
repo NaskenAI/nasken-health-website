@@ -1,73 +1,128 @@
-# Welcome to your Lovable project
+# Nasken Health — website
 
-## Project info
+Marketing site for **Nasken Health**, a unit of Nasken Inc., a Boston-based
+digital health startup building AI tools for remote patient monitoring, therapy
+summarization, and clinical analytics.
 
-**URL**: https://lovable.dev/projects/a18fbf58-7a8d-40dd-b422-a6d130aa27e1
+**Live:** [www.naskenhealth.com](https://www.naskenhealth.com) — that is the
+canonical domain. Every `<link rel="canonical">` on the site points at
+`https://www.naskenhealth.com`.
 
-## How can I edit this code?
+> **This repo is edited through git.** It was originally scaffolded by Lovable,
+> but Lovable no longer syncs to it and all of its tooling has been removed.
+> Nothing here is overwritten by an external tool — git is the only source of
+> truth, and CI is the only thing that catches a broken push.
 
-There are several ways of editing your application.
+## Stack
 
-**Use Lovable**
+|            |                                                                |
+| ---------- | -------------------------------------------------------------- |
+| Build      | Vite 7                                                         |
+| Language   | TypeScript 5.9, `strict` enabled                               |
+| UI         | React 18, Tailwind CSS 3.4                                     |
+| Routing    | react-router-dom 7 (`BrowserRouter`)                           |
+| Head tags  | react-helmet-async 3                                           |
+| Components | shadcn-ui on Radix primitives                                  |
+| Icons      | lucide-react                                                   |
+| Lint       | ESLint 9 flat config, typescript-eslint, react-hooks, jsx-a11y |
+| Format     | Prettier 3                                                     |
+| Hosting    | Vercel, with one serverless function under `api/`              |
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/a18fbf58-7a8d-40dd-b422-a6d130aa27e1) and start prompting.
+## Running locally
 
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+Node 22 is required; the version is pinned in both `.nvmrc` and `engines`.
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+nvm use            # reads .nvmrc
+npm ci
+npm run dev        # http://localhost:8080
 ```
 
-**Edit a file directly in GitHub**
+## Scripts
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+| Script                 | What it does                    |
+| ---------------------- | ------------------------------- |
+| `npm run dev`          | Vite dev server on port 8080    |
+| `npm run build`        | Production build to `dist/`     |
+| `npm run preview`      | Serve the built output          |
+| `npm run typecheck`    | `tsc -b --noEmit`               |
+| `npm run lint`         | ESLint over the repo            |
+| `npm run format`       | Rewrite files with Prettier     |
+| `npm run format:check` | Fail if anything is unformatted |
 
-**Use GitHub Codespaces**
+## Environment variables
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Copy `.env.example` to `.env.local` for local work. In production these are set
+in the Vercel project settings. `.env.local` is gitignored; never commit a key.
 
-## What technologies are used for this project?
+| Variable         | Used by          | Purpose                                      |
+| ---------------- | ---------------- | -------------------------------------------- |
+| `RESEND_API_KEY` | `api/contact.ts` | Resend API key used to send form submissions |
+| `CONTACT_TO`     | `api/contact.ts` | Inbox that receives submissions              |
 
-This project is built with:
+The `from` address in `api/contact.ts` is `no-reply@nasken.ai`, so **nasken.ai
+must be a verified sending domain in Resend** or every send is rejected. With
+either variable unset the endpoint returns 500 and the forms show their error
+state, which points the user at `contact@nasken.ai`.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Routes
 
-## How can I deploy this project?
+| Route                    | Page                          |
+| ------------------------ | ----------------------------- |
+| `/`                      | Home                          |
+| `/team`                  | Team                          |
+| `/careers`               | Careers                       |
+| `/fellowships`           | Fellowship programme          |
+| `/news/nvidia-inception` | NVIDIA Inception announcement |
+| `/privacy`               | Privacy Policy                |
+| `/terms`                 | Terms of Service              |
 
-Simply open [Lovable](https://lovable.dev/projects/a18fbf58-7a8d-40dd-b422-a6d130aa27e1) and click on Share -> Publish.
+`/contact` permanently redirects to `/careers`. Anything else renders the
+404 page, which is `noindex`.
 
-## Can I connect a custom domain to my Lovable project?
+Per-route `<title>`, description, canonical and Open Graph tags come from
+`src/components/Seo.tsx`, used once per route in `src/App.tsx`. `index.html`
+holds only the site-wide defaults (`og:site_name`, `theme-color`,
+`twitter:card`) and a crawlable `<noscript>` fallback.
 
-Yes, you can!
+## CI
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+`.github/workflows/ci.yml` runs on every pull request to `main` and on pushes
+to `main`: `npm ci`, then typecheck, lint, format check and build. It uses the
+Node version from `.nvmrc`.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+## Deployment
+
+Vercel builds from `main` and deploys to `www.naskenhealth.com`.
+
+`vercel.json` holds the SPA rewrite (excluding `/api`, `/assets` and anything
+with a file extension, so real files are still served), the `/contact`
+redirect, and the security headers: HSTS, `X-Content-Type-Options`,
+`Referrer-Policy`, `X-Frame-Options`, `Permissions-Policy`, and a
+Content-Security-Policy in **report-only** mode.
+
+## Prerendering
+
+`npm run build` does three things: builds the client bundle, builds an SSR
+bundle from `src/entry-server.tsx`, then runs `scripts/prerender.mjs` to render
+each route to `dist/<route>/index.html`.
+
+That matters because crawlers and link unfurlers — LinkedIn, WhatsApp, Slack —
+do not execute JavaScript. Without it every shared URL would show the generic
+`<noscript>` fallback from `index.html` instead of that page's own content and
+metadata.
+
+The renderer uses `renderToPipeableStream` with `onAllReady` rather than
+`renderToString`, because the routes are `React.lazy` and `renderToString`
+cannot resolve a lazy component.
+
+The route list in `scripts/prerender.mjs` must be kept in sync with the route
+table in `src/App.tsx`. The 404 route is deliberately not prerendered.
+
+On Vercel the prerendered files win: `rewrites` are only applied after the
+filesystem check, so `/team` serves `dist/team/index.html` and the SPA rewrite
+is the fallback for anything with no prerendered file.
+
+## Licence
+
+See [LICENSE](./LICENSE).

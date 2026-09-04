@@ -1,10 +1,21 @@
 import { LinkedinIcon, MapPin, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const Footer = () => {
+type FooterProps = {
+  /**
+   * "scroll" renders the in-page About/Technology jump links, for the one page
+   * that actually has those sections. "home" renders a Home link instead, for
+   * every other route. Replaces the old Footer / Footer-2 duplicate pair.
+   */
+  navVariant?: "scroll" | "home";
+};
+
+const Footer = ({ navVariant = "home" }: FooterProps) => {
   const handleScroll = (id: string) => {
     const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
+    if (!el) return;
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    el.scrollIntoView({ behavior: reduce ? "auto" : "smooth" });
   };
 
   return (
@@ -43,20 +54,31 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Quick Links</h4>
             <nav className="flex flex-col space-y-2 text-white/80">
-              <button onClick={() => handleScroll("about")} className="text-left hover:text-white">
-                About
-              </button>
-              <button onClick={() => handleScroll("technology")} className="text-left hover:text-white">
-                Technology
-              </button>
+              {navVariant === "scroll" ? (
+                <>
+                  <button
+                    onClick={() => handleScroll("about")}
+                    className="text-left hover:text-white"
+                  >
+                    About
+                  </button>
+                  <button
+                    onClick={() => handleScroll("technology")}
+                    className="text-left hover:text-white"
+                  >
+                    Technology
+                  </button>
+                </>
+              ) : (
+                <Link to="/" className="hover:text-white">
+                  Home
+                </Link>
+              )}
               <Link to="/team" className="hover:text-white">
                 Team
               </Link>
               <Link to="/careers" className="hover:text-white">
                 Careers
-              </Link>
-              <Link to="/contact" className="hover:text-white">
-                Contact
               </Link>
               <Link to="/fellowships" className="hover:text-white">
                 Nasken AI Health Fellowships
@@ -105,7 +127,10 @@ const Footer = () => {
         <div className="text-center text-white/70 text-sm">
           <p>© {new Date().getFullYear()} Nasken Inc. All rights reserved.</p>
           <p className="mt-2">
-            <Link to="/privacy" className="hover:text-white underline underline-offset-4">
+            <Link
+              to="/privacy"
+              className="hover:text-white underline underline-offset-4"
+            >
               Privacy Policy
             </Link>{" "}
             ·{" "}
@@ -113,19 +138,6 @@ const Footer = () => {
               Terms of Service
             </Link>
           </p>
-        </div>
-
-        {/* static crawlable absolute links for verification */}
-        <div className="mt-6 text-center text-xs text-white/60">
-          <a href="https://www.naskenhealth.com/team" className="mx-2 underline">
-            Team
-          </a>
-          <a href="https://www.naskenhealth.com/careers" className="mx-2 underline">
-            Careers
-          </a>
-          <a href="https://www.naskenhealth.com/contact" className="mx-2 underline">
-            Contact
-          </a>
         </div>
       </div>
     </footer>

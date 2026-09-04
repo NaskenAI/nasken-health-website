@@ -1,10 +1,6 @@
 // src/components/Research.tsx
 import React from "react";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 
 type Stat = {
   value: string;
@@ -16,12 +12,10 @@ const Research = () => {
   const stats: Stat[] = [
     {
       value: "1 in 5",
-      label:
-        "Adults experience a mental health condition each year (U.S.).",
+      label: "Adults experience a mental health condition each year (U.S.).",
       cite: {
         short: "APA, 2024",
-        note:
-          "American Psychiatric Association fact sheet reporting ~20% of adults experience mental illness annually.",
+        note: "American Psychiatric Association fact sheet reporting ~20% of adults experience mental illness annually.",
         url: "https://www.psychiatry.org/news-room/facts-statistics/mental-illness",
       },
     },
@@ -31,8 +25,7 @@ const Research = () => {
         "Added symptom reduction with expressive or reflective journaling vs. control interventions.",
       cite: {
         short: "Journaling Meta-analysis, 2022",
-        note:
-          "Systematic review and meta-analysis showing small but significant mental health benefits of journaling interventions.",
+        note: "Systematic review and meta-analysis showing small but significant mental health benefits of journaling interventions.",
         url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8935176/",
       },
     },
@@ -42,8 +35,7 @@ const Research = () => {
         "Web-based positive-affect journaling reduced distress and improved well-being.",
       cite: {
         short: "Smyth et al., 2018",
-        note:
-          "Randomized controlled trial published in JMIR Mental Health examining effects of online journaling for 12 weeks.",
+        note: "Randomized controlled trial published in JMIR Mental Health examining effects of online journaling for 12 weeks.",
         url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC6305886/",
       },
     },
@@ -53,8 +45,7 @@ const Research = () => {
         "Patient-generated health data (PGHD) supports self-management and shared decision-making.",
       cite: {
         short: "PGHD Review, 2020",
-        note:
-          "ResearchGate review summarizing how patient-generated health data improves engagement and clinical collaboration.",
+        note: "ResearchGate review summarizing how patient-generated health data improves engagement and clinical collaboration.",
         url: "https://www.researchgate.net/publication/340853530_Patient-Generated_Health_Data_Dimensions_Challenges_and_Open_Questions",
       },
     },
@@ -64,19 +55,16 @@ const Research = () => {
         "Structured between-session data helps personalize care and track outcomes.",
       cite: {
         short: "MDPI, 2023",
-        note:
-          "MDPI Social Sciences qualitative study exploring clinician feedback on patient data in care planning.",
+        note: "MDPI Social Sciences qualitative study exploring clinician feedback on patient data in care planning.",
         url: "https://www.mdpi.com/2076-0760/12/12/648",
       },
     },
     {
       value: "Engagement",
-      label:
-        "Guided journaling builds emotional awareness between sessions.",
+      label: "Guided journaling builds emotional awareness between sessions.",
       cite: {
         short: "APA, 2024",
-        note:
-          "APA mental health tools note journaling as a way to increase emotional regulation and therapeutic reflection.",
+        note: "APA mental health tools note journaling as a way to increase emotional regulation and therapeutic reflection.",
         url: "https://www.psychiatry.org/news-room/facts-statistics/mental-illness",
       },
     },
@@ -90,7 +78,8 @@ const Research = () => {
         </h2>
         <p className="text-white/80 max-w-2xl mx-auto mb-12 text-lg">
           Structured journaling and patient-generated data improve self-awareness,
-          support emotion regulation, and give clinicians richer context between sessions.
+          support emotion regulation, and give clinicians richer context between
+          sessions.
         </p>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
@@ -100,9 +89,7 @@ const Research = () => {
               className="rounded-xl border border-white/10 p-6 shadow-sm hover:shadow-soft transition"
               style={{ background: "var(--card)" }}
             >
-              <div className="text-2xl md:text-3xl font-semibold mb-3">
-                {s.value}
-              </div>
+              <div className="text-2xl md:text-3xl font-semibold mb-3">{s.value}</div>
               <div className="text-sm md:text-base text-white/70 leading-snug mb-3">
                 {s.label}
               </div>
@@ -129,8 +116,8 @@ const Research = () => {
 
         <p className="mt-10 text-xs text-white/50 max-w-3xl mx-auto">
           Sources: American Psychiatric Association (2024); JAMA Network Open (2022);
-          Smyth et al., JMIR Mental Health (2018); ResearchGate PGHD Review (2020);
-          MDPI Social Sciences (2023).
+          Smyth et al., JMIR Mental Health (2018); ResearchGate PGHD Review (2020); MDPI
+          Social Sciences (2023).
         </p>
       </div>
     </section>

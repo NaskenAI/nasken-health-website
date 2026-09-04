@@ -1,0 +1,8 @@
+dist
+node_modules
+package-lock.json
+public/sitemap.xml
+*.ico
+*.jpg
+*.png
+*.svg

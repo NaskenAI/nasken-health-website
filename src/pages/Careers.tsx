@@ -9,7 +9,7 @@ export default function Careers() {
         <title>Careers — Nasken Health</title>
         <meta
           name="description"
-          content="Explore career opportunities at Nasken Health. Share your LinkedIn profile to be considered for future roles in digital health and AI innovation."
+          content="Nasken Health has no current openings. Share your LinkedIn profile and we will reach out if there is a fit."
         />
         <link rel="canonical" href="https://www.naskenhealth.com/careers" />
       </Helmet>

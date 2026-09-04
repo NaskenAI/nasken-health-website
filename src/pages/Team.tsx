@@ -3,6 +3,25 @@ import { LinkedinIcon, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 import Footer from "@/components/Footer";
 
+function InitialsAvatar({ name }: { name: string }) {
+  const initials = name
+    .split(" ")
+    .map((part) => part[0])
+    .join("")
+    .slice(0, 2)
+    .toUpperCase();
+
+  return (
+    <div
+      className="w-32 h-32 mx-auto rounded-full mb-5 bg-slate-100 flex items-center justify-center"
+      role="img"
+      aria-label={name}
+    >
+      <span className="text-2xl font-semibold text-ink-900/60">{initials}</span>
+    </div>
+  );
+}
+
 export default function Team() {
   return (
     <main className="bg-white text-ink-900">
@@ -10,7 +29,7 @@ export default function Team() {
         <title>Our Team — Nasken Health</title>
         <meta
           name="description"
-          content="Meet the Nasken Health leadership team advancing trustworthy, privacy-preserving AI in healthcare, including Founder & CEO Sandesh GV, Head of Engineering Uriah Thornes, and Software Engineer Alex Audi."
+          content="Meet the Nasken Health team: Founder & CEO Sandesh GV, Uriah Thornes on engineering, and Yijia Xu, advisor on research and data."
         />
         <link rel="canonical" href="https://www.naskenhealth.com/team" />
       </Helmet>
@@ -31,13 +50,9 @@ export default function Team() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 justify-items-center">
           {/* Founder */}
           <div className="text-center border border-slate-200 rounded-2xl p-8 hover:shadow-soft transition w-full max-w-sm">
-            <img
-              src="https://avatars.githubusercontent.com/u/00000000?v=4"
-              alt="Sandesh GV"
-              className="w-32 h-32 mx-auto rounded-full mb-5 object-cover"
-            />
+            <InitialsAvatar name="Sandesh GV" />
             <h3 className="text-xl font-semibold">Sandesh GV</h3>
-            <p className="text-leaf-600 font-medium mb-3">Software Developer</p>
+            <p className="text-leaf-600 font-medium mb-3">Founder &amp; CEO</p>
             <p className="text-sm text-ink-900/70 leading-relaxed">
               Engineering leader with 12+ years of experience in AI and software systems.
               Formerly at Meta and Oracle, building privacy-preserving clinical AI
@@ -67,11 +82,7 @@ export default function Team() {
 
           {/* Head of Engineering */}
           <div className="text-center border border-slate-200 rounded-2xl p-8 hover:shadow-soft transition w-full max-w-sm">
-            <img
-              src="/images/team/uriah-thornes.jpg"
-              alt="Uriah Thornes"
-              className="w-32 h-32 mx-auto rounded-full mb-5 object-cover"
-            />
+            <InitialsAvatar name="Uriah Thornes" />
             <h3 className="text-xl font-semibold">Uriah Thornes</h3>
             <p className="text-leaf-600 font-medium mb-3">Engineering</p>
             <p className="text-sm text-ink-900/70 leading-relaxed">
@@ -93,11 +104,7 @@ export default function Team() {
 
 
           <div className="text-center border border-slate-200 rounded-2xl p-8 hover:shadow-soft transition w-full max-w-sm">
-            <img
-              src="/images/team/yijia-xu.jpg"
-              alt="Yijia Xu"
-              className="w-32 h-32 mx-auto rounded-full mb-5 object-cover"
-            />
+            <InitialsAvatar name="Yijia Xu" />
             <h3 className="text-xl font-semibold">Yijia Xu</h3>
             <p className="text-leaf-600 font-medium mb-3">Advisor — Research & Data</p>
             <p className="text-sm text-ink-900/70 leading-relaxed">
@@ -108,13 +115,6 @@ export default function Team() {
             </p>
 
             <div className="flex items-center justify-center gap-4 mt-4">
-              <a
-                href="mailto:xuy13023@gmail.com"
-                className="text-ink-900 hover:text-leaf-600"
-                aria-label="Email Yijia"
-              >
-                <Mail className="w-5 h-5" />
-              </a>
               <a
                 href="https://www.linkedin.com/in/yijia-xu-georgina"
                 target="_blank"
@@ -137,9 +137,9 @@ export default function Team() {
             </div>
             <h3 className="text-lg font-medium mb-2">Interested in joining our mission?</h3>
             <p className="text-sm">
-              Explore opportunities at{" "}
+              No current openings — you can still{" "}
               <span className="text-leaf-600 underline hover:text-leaf-700">
-                Nasken Health Careers
+                share your LinkedIn profile
               </span>
               .
             </p>

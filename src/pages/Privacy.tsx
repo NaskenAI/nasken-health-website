@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 const Privacy = () => {
   const updated = "30-Apr-2025";
@@ -98,11 +97,7 @@ const Privacy = () => {
         </h2>
         <p className="text-slate-700 mb-4">
           We may use cookies and similar tech for essential functions and basic
-          analytics. You can control cookies in your browser. For details, see our{" "}
-          <Link to="/cookies" className="text-sky-700">
-            Cookie Policy
-          </Link>
-          .
+          analytics. You can control cookies in your browser.
         </p>
         <button
           type="button"

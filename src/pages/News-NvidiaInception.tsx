@@ -1,20 +1,8 @@
-import { Helmet } from "react-helmet-async";
 import Footer from "@/components/Footer";
 
 export default function NvidiaInception() {
   return (
     <main className="bg-white text-ink-900">
-      <Helmet>
-        <title>Nasken Health Joins NVIDIA Inception Program</title>
-        <meta
-          name="description"
-          content="Nasken Health has joined the NVIDIA Inception Program to accelerate innovation in trustworthy, privacy-preserving AI for healthcare."
-        />
-        <link
-          rel="canonical"
-          href="https://www.naskenhealth.com/news/nvidia-inception"
-        />
-      </Helmet>
 
       {/* Header */}
       <section className="section py-16 text-center">

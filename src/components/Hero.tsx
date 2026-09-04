@@ -37,7 +37,7 @@ const Hero = () => {
         <button onClick={() => scrollTo("technology")} className="text-white/80 hover:text-leaf-400">
           Technology
         </button>
-        <Link to="/contact" className="text-white/80 hover:text-leaf-400">
+        <Link to="/careers" className="text-white/80 hover:text-leaf-400">
           Contact
         </Link>
         <Link to="/fellowships" className="text-white/80 hover:text-leaf-400">
@@ -54,7 +54,7 @@ const Hero = () => {
 
         <div className="flex items-center justify-center gap-3">
           <Link
-            to="/contact"
+            to="/careers"
             className="rounded-lg px-5 py-3 font-medium text-white shadow-soft"
             style={{ background: "var(--btn)" }}
           >

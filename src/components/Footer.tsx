@@ -72,9 +72,6 @@ const Footer = ({ navVariant = "home" }: FooterProps) => {
               <Link to="/careers" className="hover:text-white">
                 Careers
               </Link>
-              <Link to="/contact" className="hover:text-white">
-                Contact
-              </Link>
               <Link to="/fellowships" className="hover:text-white">
                 Nasken AI Health Fellowships
               </Link>

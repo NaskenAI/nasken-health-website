@@ -1,4 +1,3 @@
-import { Helmet } from "react-helmet-async";
 import { LinkedinIcon, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 import Footer from "@/components/Footer";
@@ -25,14 +24,6 @@ function InitialsAvatar({ name }: { name: string }) {
 export default function Team() {
   return (
     <main className="bg-white text-ink-900">
-      <Helmet>
-        <title>Our Team — Nasken Health</title>
-        <meta
-          name="description"
-          content="Meet the Nasken Health team: Founder & CEO Sandesh GV, Uriah Thornes on engineering, and Yijia Xu, advisor on research and data."
-        />
-        <link rel="canonical" href="https://www.naskenhealth.com/team" />
-      </Helmet>
 
       {/* Header */}
       <section className="section py-16 text-center">

@@ -1,18 +1,9 @@
-import { Helmet } from "react-helmet-async";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
 
 export default function Careers() {
   return (
     <main className="bg-white text-ink-900">
-      <Helmet>
-        <title>Careers — Nasken Health</title>
-        <meta
-          name="description"
-          content="Nasken Health has no current openings. Share your LinkedIn profile and we will reach out if there is a fit."
-        />
-        <link rel="canonical" href="https://www.naskenhealth.com/careers" />
-      </Helmet>
 
       {/* Header */}
       <section className="section py-16 text-center">

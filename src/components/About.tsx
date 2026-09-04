@@ -14,8 +14,8 @@ const About = () => {
           <div className="space-y-6 text-white/80">
             <p>
               Nasken Health is a Boston-based digital health startup developing
-              AI-powered tools for remote patient monitoring, therapy data
-              summarization, and predictive health analytics. Our platform helps
+              AI-powered tools for remote patient monitoring and therapy data
+              summarization. Our platform helps
               clinicians and mental health professionals transform unstructured notes
               and self-reported data into clear, actionable insights.
             </p>

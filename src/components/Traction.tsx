@@ -13,8 +13,8 @@ const Traction = () => {
           Early Results & Traction
         </h2>
         <p className="text-white/80 max-w-3xl mx-auto mb-12 text-lg">
-          Nasken Health is currently in early pilot deployment, validating its
-          journaling and AI-assisted insight platform with clinicians and behavioral
+          These figures come from our earlier work: an early pilot deployment validating
+          our journaling and AI-assisted insight platform with clinicians and behavioral
           health researchers.
         </p>
 

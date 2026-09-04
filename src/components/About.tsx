@@ -26,8 +26,8 @@ const About = () => {
               better engagement, early risk detection, and personalized care.
             </p>
             <p>
-              Current pilots include an AI-supported therapy session summarization tool
-              that assists clinicians in tracking progress, improving outcomes, and
+              Our earlier work includes an AI-supported therapy session summarization
+              tool that assists clinicians in tracking progress, improving outcomes, and
               enhancing collaboration across care teams.
             </p>
           </div>

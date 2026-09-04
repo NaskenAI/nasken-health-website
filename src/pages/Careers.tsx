@@ -1,7 +1,49 @@
+import { useState } from "react";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
 
 export default function Careers() {
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">(
+    "idle"
+  );
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    if (status === "sending") return;
+
+    const data = new FormData(event.currentTarget);
+    setStatus("sending");
+    setError("");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: data.get("name"),
+          email: data.get("email"),
+          linkedin: data.get("linkedin"),
+          message: data.get("message"),
+          _hp: data.get("_hp"),
+        }),
+      });
+
+      const payload = await res.json().catch(() => ({}));
+
+      if (!res.ok) {
+        setError(payload?.error || "Something went wrong sending your message.");
+        setStatus("error");
+        return;
+      }
+
+      setStatus("sent");
+    } catch {
+      setError("Something went wrong sending your message.");
+      setStatus("error");
+    }
+  };
+
   return (
     <main className="bg-white text-ink-900">
 
@@ -17,17 +59,23 @@ export default function Careers() {
 
       {/* Submission form */}
       <section className="section pb-20 max-w-3xl mx-auto">
-        <form
-          action="https://formspree.io/f/mqaygpaa"
-          method="POST"
-          className="grid grid-cols-1 gap-4"
-        >
-          <input
-            type="hidden"
-            name="_redirect"
-            value="https://www.naskenhealth.com/careers?sent=1"
-          />
-          <input type="text" name="_gotcha" style={{ display: "none" }} />
+        {status === "sent" ? (
+          <div className="rounded-lg border border-slate-300 p-6 text-center">
+            <h2 className="text-xl font-semibold mb-2">Thanks — we have your details.</h2>
+            <p className="text-ink-900/70">
+              We will reach out if there is a fit. For anything urgent, email{" "}
+              <a
+                href="mailto:contact@nasken.ai"
+                className="text-leaf-600 hover:text-leaf-700 underline"
+              >
+                contact@nasken.ai
+              </a>
+              .
+            </p>
+          </div>
+        ) : (
+        <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-4">
+          <input type="text" name="_hp" tabIndex={-1} autoComplete="off" style={{ display: "none" }} />
 
           <div>
             <label className="block text-sm text-ink-900/70 mb-1">Full name *</label>
@@ -77,15 +125,27 @@ export default function Careers() {
             </Link>.
           </p>
 
+          {status === "error" && (
+            <p role="alert" className="text-sm text-red-700">
+              {error} Please email us directly at{" "}
+              <a href="mailto:contact@nasken.ai" className="underline">
+                contact@nasken.ai
+              </a>
+              .
+            </p>
+          )}
+
           <div>
             <button
               type="submit"
-              className="inline-flex items-center justify-center rounded-lg border-2 border-ink-900 px-5 py-3 text-ink-900 hover:bg-ink-900 hover:text-white transition"
+              disabled={status === "sending"}
+              className="inline-flex items-center justify-center rounded-lg border-2 border-ink-900 px-5 py-3 text-ink-900 hover:bg-ink-900 hover:text-white transition disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              Submit
+              {status === "sending" ? "Sending…" : "Submit"}
             </button>
           </div>
         </form>
+        )}
 
         <p className="mt-6 text-sm text-ink-900/70">
           Prefer email? Send your LinkedIn profile or message to{" "}

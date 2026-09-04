@@ -1,7 +1,13 @@
-import { Globe, Lock, Zap } from "lucide-react";
+import { Activity, Globe, Lock, Zap } from "lucide-react";
 
 const Technology = () => {
   const technologies = [
+    {
+      icon: <Activity className="w-8 h-8 text-emerald-400" />,
+      title: "Post-discharge risk identification",
+      description:
+        "Identifying which patients need attention in the weeks after discharge, when clinical visibility is thinnest.",
+    },
     {
       icon: <Globe className="w-8 h-8 text-emerald-400" />,
       title: "Interoperable Architecture",
@@ -32,7 +38,7 @@ const Technology = () => {
         </p>
       </div>
 
-      <div className="grid md:grid-cols-3 gap-6">
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
         {technologies.map((tech, index) => (
           <div
             key={index}

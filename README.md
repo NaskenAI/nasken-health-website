@@ -101,9 +101,27 @@ redirect, and the security headers: HSTS, `X-Content-Type-Options`,
 `Referrer-Policy`, `X-Frame-Options`, `Permissions-Policy`, and a
 Content-Security-Policy in **report-only** mode.
 
-Because the site is client-rendered, crawlers and link unfurlers that do not
-execute JavaScript see the `<noscript>` block in `index.html` rather than
-per-route content.
+## Prerendering
+
+`npm run build` does three things: builds the client bundle, builds an SSR
+bundle from `src/entry-server.tsx`, then runs `scripts/prerender.mjs` to render
+each route to `dist/<route>/index.html`.
+
+That matters because crawlers and link unfurlers — LinkedIn, WhatsApp, Slack —
+do not execute JavaScript. Without it every shared URL would show the generic
+`<noscript>` fallback from `index.html` instead of that page's own content and
+metadata.
+
+The renderer uses `renderToPipeableStream` with `onAllReady` rather than
+`renderToString`, because the routes are `React.lazy` and `renderToString`
+cannot resolve a lazy component.
+
+The route list in `scripts/prerender.mjs` must be kept in sync with the route
+table in `src/App.tsx`. The 404 route is deliberately not prerendered.
+
+On Vercel the prerendered files win: `rewrites` are only applied after the
+filesystem check, so `/team` serves `dist/team/index.html` and the SPA rewrite
+is the fallback for anything with no prerendered file.
 
 ## Licence
 
